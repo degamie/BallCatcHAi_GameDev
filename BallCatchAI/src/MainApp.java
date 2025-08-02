@@ -1,7 +1,15 @@
+
+import java.awt.GraphicsConfiguration;
+
 public class MainApp {
     Background bg=new Background();
     bg.setColor(.0f,.7;1.5f);
     bg.setApplicationContext;
     bg.addChilden
-    bg.addChild(bg);                                                                                                                                                                                                                                                                                                                                  wwwwwwwwwwwwwwwwwwwwwwwww)
-})
+    bg.addChild(bg);       
+    
+    public Canvas3d(GraphicsConfiguration GraphicsConfiguration,String OffScreen){
+        this.GraphicsConfiguration=GraphicsConfiguration;
+        this.OffScreen=OffScreen;//Binding OffScreen And GraphicsConfigura
+    }
+}
