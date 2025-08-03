@@ -2,6 +2,8 @@
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 
+
+//Developed By Sarthak Mittal(DegamieSign) (8/3/2025)///
 public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
     public Matrix matrix=new Matrix(); //Matrix Obj Declare
     Background bg=new Background();//Background Obj declare
@@ -21,3 +23,4 @@ public class MainApp extends Applet implements KeyListener {//inheriting Applet 
     }
     
 }
+
