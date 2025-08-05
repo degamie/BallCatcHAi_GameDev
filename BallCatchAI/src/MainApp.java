@@ -1,6 +1,7 @@
 
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
+import java.time.Duration;
 
 import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
@@ -16,11 +17,16 @@ public class MainApp extends Application {//inheriting Application
         return modelRoot;//Printing Model Root
         animate(GroupModel);//Calling animate Func
          }
-        public Group animate(Group model){model.getChildren();}//TBC//Animating 3d Model Declare
-       
-   
-    
-}
+        public Group animate(Group model){//Animating 3d Model Declare
+           model.getChildren().stream()//Model's Children Stream's Fetching
+           .filter(view->view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
+           .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
+           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
+           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
+           rot.setByAngle(360)//Angular Rotation's Binding
+           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+         }
+       }
 //Using Java3d 
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
   // public BatchGroup Rootobj=new BatchGroup();
