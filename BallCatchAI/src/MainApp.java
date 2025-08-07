@@ -25,8 +25,12 @@ public class MainApp extends Application {//inheriting Application
            rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
            rot.setByAngle(360)//Angular Rotation's Binding
            rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
-         }
+
+       public void Start(Stage Stage)throws Exception{//Start Funct Declare
+        Stage.setScene(createScrene());//Binding SceneCreation 
+        Stage.show();//Displaying Stage's Scene 
        }
+         }
 //Using Java3d 
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
   // public BatchGroup Rootobj=new BatchGroup();
