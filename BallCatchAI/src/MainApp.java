@@ -5,8 +5,25 @@ import java.time.Duration;
 
 import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
+
+import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
+  public Scene createScene(){//SceneCreation Method declare
+    PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
+    Camera camera=new Camera();//Camera obj declare
+    camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
+    Group mdl1=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
+     Group mdl2=loadAICharacter(getClass().getResources("Ball_AI.fbx"));
+     mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation 
+     animate(model);//Animating Model
+     Group root1=new Group(mdl1);//Root1 Obj declare
+     Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
+     scene.setCamera(camera);//Camera's Binding
+     
+     return Scene;//Printing Scene
+  
+  }
     public Group loadAICharacter(URL url){//loadAICharacter funct Declare
         View view =new View();//View Obj declare
         Group ModelRoot=new Group();//ModelReoot Obj declare
