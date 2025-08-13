@@ -1,0 +1,8 @@
+public class AIGameAgent{
+    public Move getBestMove(String gameState){
+        return minMax(state);
+    }
+     public Move minMax(Integer depth,State state,Node root,Integer left,Integer right ){
+        if(depth==0)return new Math.max( root.left.left,root.right.right ); 
+     }
+}
