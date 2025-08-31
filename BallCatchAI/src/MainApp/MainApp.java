@@ -10,12 +10,18 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
   //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)
 public class MainApp extends Application {//inheriting Application
-      public Scene createScene(){//SceneCreation Method declare
-          PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
-          Camera camera=new Camera();//Camera obj declare
-          camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
-          public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
-          public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
+    public MainApp(PerspectiveCamera camera,Group mdl1,Group mdl2,Scene scene){
+        this.camera=camera;
+        this.mdl1=mdl1;
+        this.mdl2=mdl2;
+        this.scene=scene;
+    }
+  public Scene createScene(){//SceneCreation Method declare
+    PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
+    Camera camera=new Camera();//Camera obj declare
+    camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
+  public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
+  public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
 
      mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation 
      animate(model);//Animating Model
@@ -27,27 +33,7 @@ public class MainApp extends Application {//inheriting Application
   
   }
   //Ball Animation
-  public class MainApp extends Ai_Character{//AI_Character Inherted Class
-      public Group animateAI(Group model){//Animating 3d Model Declare
-          model.getChildren().stream()//Model's Children Stream's Fetching
-                  .filter(view->view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
-                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
-                          rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
-                          rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
-                          rot.setByAngle(360)//Angular Rotation's Binding
-                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
-      public Group loadAICharacter(URL url){//loadAICharacter funct Declare
-          View view =new View();//View Obj declare
-          Group ModelRoot=new Group();//ModelReoot Obj declare
-          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
-          importer.read(url);//Url obj's Input declare
-          ModelViewObject obj=import.importer.getImport();//Fetching the Import
-          modelRoot.getChildren().add(view);//Adding Obj View
-          return modelRoot;//Printing Model Root
-          animate(GroupModel);//Calling animate Func
-      }
-  }
-      public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
+  public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
            mdl2.getChildren().stream()//Model's Children Stream's Fetching
            .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
            .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
@@ -69,8 +55,6 @@ public class MainApp extends Application {//inheriting Application
         }
 
  //Loading Ball Model AI_Character
-
-  //Animating AI_Character Model
 
 //SCene Startup
        public void Start(Stage Stage)throws Exception{//Start Funct Declare
