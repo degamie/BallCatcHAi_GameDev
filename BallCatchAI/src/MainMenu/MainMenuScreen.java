@@ -7,6 +7,10 @@ public class MainMenuScreen extends SimpleApplication{
         FileMenu exitMenu=new FileMenu("exitMenu");
 
         filemenu.getItems().addAll(openMenu,SaveMenu,exitMenu);
+        MainMenuScreen(MenuBar menuBar){
+            this.menuBar=menuBar;
+        }
+
     }
     public String EditMenu(String[] args){
         EditMenu editMenu=new EditMenu();
