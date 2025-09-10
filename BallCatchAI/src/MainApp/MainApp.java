@@ -10,6 +10,8 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
   //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)
 public class MainApp extends Application {//inheriting Application
+    ProccessBuilder proccessBuilder=new ProccessBuilder("python",
+            resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
     public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
         this.mdl1=mdl1;
         this.mdl2=mdl2;
