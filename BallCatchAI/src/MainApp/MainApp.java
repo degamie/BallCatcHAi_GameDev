@@ -8,8 +8,12 @@ import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
-  //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)
+  //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)  //WID(13/09/2025)
 public class MainApp extends Application {//inheriting Application
+      ProcessBuilder processBuilder=new ProcessBuilder();
+
+      processBuilder.redirectErrorMessageStream(true);
+      Process process=processBuilder.start();
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
     public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
@@ -21,9 +25,14 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public Stirng getView(View view){return  view;}
     public String getMdl1(Group mdl1){
         return mdl1;
     }
+    public String getScene(Scene scene){
+        return scene;
+    }
+
       public Scene createScene(){//SceneCreation Method declare
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
