@@ -33,7 +33,9 @@ public class MainApp extends Application {//inheriting Application
         return scene;
     }
     public String getStage(Stage stage){return stage;}
-
+    public String setStage(Stage stage){
+        this.stage=stage+"Stage  Binded Val";
+    }
       public Scene createScene(){//SceneCreation Method declare
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
