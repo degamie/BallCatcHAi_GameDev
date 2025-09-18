@@ -25,7 +25,10 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String getCamera(Camera camera){return camera;}
+      public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
+
     public String getMdl1(Group mdl1){
         return mdl1;
     }
