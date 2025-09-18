@@ -25,14 +25,21 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String  setScene(Scene scene){this.scene=scene;}
+    public String getCamera(Camera camera){return camera;}
+      public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
+
     public String getMdl1(Group mdl1){
         return mdl1;
     }
     public String getScene(Scene scene){
         return scene;
     }
-
+    public String getStage(Stage stage){return stage;}
+    public String setStage(Stage stage){
+        this.stage=stage+"Stage  Binded Val";
+    }
       public Scene createScene(){//SceneCreation Method declare
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
