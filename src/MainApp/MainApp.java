@@ -25,6 +25,7 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String  setScene(Scene scene){this.scene=scene;}
     public String getCamera(Camera camera){return camera;}
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
@@ -95,6 +96,9 @@ public class MainApp extends Application {//inheriting Application
         modelRoot=mdl2;
         return modelRoot;//Printing Model Root 
         animateBallAi(mdl2);//Calling animate Func
+        }
+        public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
+       return objectModelImporter;
         }
 
  //Loading Ball Model AI_Character
