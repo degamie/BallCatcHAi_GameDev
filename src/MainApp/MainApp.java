@@ -100,6 +100,9 @@ public class MainApp extends Application {//inheriting Application
         public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
        return objectModelImporter;
         }
+        public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
+       this.objectModelImporter=objectModelImporter;
+        }
 
  //Loading Ball Model AI_Character
 
