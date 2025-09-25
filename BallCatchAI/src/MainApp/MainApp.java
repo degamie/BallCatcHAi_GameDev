@@ -25,8 +25,13 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String getModelViewObject(ModelViewObject obj){
+        return obj;    //Fetching ModelViewObject
+    }
+    public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
     public String  setScene(Scene scene){this.scene=scene;}
     public String getCamera(Camera camera){return camera;}
+
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
 
@@ -47,14 +52,14 @@ public class MainApp extends Application {//inheriting Application
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
 
-     mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation 
+     mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation
      animate(model);//Animating Model
      Group root1=new Group(mdl1);//Root1 Obj declare
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
      scene.setCamera(camera);//Camera's Binding
-     
+
      return Scene;//Printing Scene
-  
+
   }
   //Ball Animation
   public class MainApp extends Ai_Character{//AI_Character Inherted Class
@@ -94,8 +99,14 @@ public class MainApp extends Application {//inheriting Application
         ModelViewObject obj=import.importer.getImport();//Fetching the Import
         modelRoot.getChildren().add(view);//Adding Obj View
         modelRoot=mdl2;
-        return modelRoot;//Printing Model Root 
+        return modelRoot;//Printing Model Root
         animateBallAi(mdl2);//Calling animate Func
+        }
+        public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
+       return objectModelImporter;
+        }
+        public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
+       this.objectModelImporter=objectModelImporter;
         }
 
  //Loading Ball Model AI_Character
@@ -104,11 +115,11 @@ public class MainApp extends Application {//inheriting Application
 
 //SCene Startup
        public void Start(Stage Stage)throws Exception{//Start Funct Declare
-        Stage.setScene(createScrene());//Binding SceneCreation 
-        Stage.show();//Displaying Stage's Scene 
+        Stage.setScene(createScrene());//Binding SceneCreation
+        Stage.show();//Displaying Stage's Scene
        }
          }
-//Using Java3d 
+//Using Java3d
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
   // public BatchGroup Rootobj=new BatchGroup();
     // public TransformGroup transformGroup=new TransformGroup();
@@ -126,8 +137,8 @@ public class MainApp extends Application {//inheriting Application
     // public BatchGroup createSceneGraph(){//createSceneGraph Method Declare
     //     BatchGroup BatchGroup=new BoundingSphere(new Points3d(),1500.0);//BatchGroup Obj Declare
     //     ViewTrans ViewTrans=universe.getViewingPlatform.getView('Platform transform');//ViewTrans Obj Declare
-    // }      
-    
+    // }
+
     // public Canvas3d(GraphicsConfiguration GraphicsConfiguration,String OffScreen){//Canvas3d Param Constructor
     //     this.GraphicsConfiguration=GraphicsConfiguration;//Binding GraphicsConfiguration Node
     //     this.OffScreen=OffScreen;//Binding OffScreen Node
