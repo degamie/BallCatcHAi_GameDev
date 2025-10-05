@@ -7,8 +7,9 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
+//Work IN Dev Sarthak Mittal=(Degamiesign)(04/10/2025)
   //Using JavaFX
-  //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)  //WID(13/09/2025)
+
 public class MainApp extends Application {//inheriting Application
       ProcessBuilder processBuilder=new ProcessBuilder();
 
@@ -26,6 +27,14 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+      public void Start(Stage Stage)throws Exception{//Start Funct Declare
+          processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
+          Process process=processBuilder.start();//Starting New Process
+          Stage.setScene(createScrene());//Binding SceneCreation
+          Stage.show();//Displaying Stage's Scene
+
+      }
+
     public String getModelViewObject(ModelViewObject obj){
         return obj;
     }    //Fetching ModelViewObject
@@ -45,6 +54,7 @@ public class MainApp extends Application {//inheriting Application
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
 
+    public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
     public String getMdl1(Group mdl1){
         return mdl1;
     }
@@ -124,10 +134,7 @@ public class MainApp extends Application {//inheriting Application
   //Animating AI_Character Model
 
 //SCene Startup
-       public void Start(Stage Stage)throws Exception{//Start Funct Declare
-        Stage.setScene(createScrene());//Binding SceneCreation
-        Stage.show();//Displaying Stage's Scene
-       }
+
          }
 //Using Java3d
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
