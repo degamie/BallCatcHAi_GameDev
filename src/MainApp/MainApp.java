@@ -34,6 +34,9 @@ public class MainApp extends Application {//inheriting Application
           Stage.show();//Displaying Stage's Scene
 
       }
+      public String getModelRoot(Group ModelRoot){
+        return ModelRoot;
+      }
 
     public String getModelViewObject(ModelViewObject obj){
         return obj;
@@ -54,6 +57,7 @@ public class MainApp extends Application {//inheriting Application
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
 
+    public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
     public String getMdl1(Group mdl1){
         return mdl1;
     }
