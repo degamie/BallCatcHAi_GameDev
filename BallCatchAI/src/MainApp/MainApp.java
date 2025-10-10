@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(04/10/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(10/10/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -34,11 +34,15 @@ public class MainApp extends Application {//inheriting Application
           Stage.show();//Displaying Stage's Scene
 
       }
+      public String getModelRoot(Group ModelRoot){
+        return ModelRoot;
+      }
 
     public String getModelViewObject(ModelViewObject obj){
         return obj;
     }    //Fetching ModelViewObject
-      public String getModelImporter(ObjModelImporter Importer){return Importer;}
+    public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
+    public String getModelImporter(ObjModelImporter Importer){return Importer;}
       public List<String> readProcess(InputStream inputStream)throws IOException{
         try{
             BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
