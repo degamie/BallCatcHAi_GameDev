@@ -7,14 +7,16 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(10/10/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(12/10/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
+    int outputCnt=output.size();//Counting output's Size Declare
       ProcessBuilder processBuilder=new ProcessBuilder();
 
       processBuilder.redirectErrorMessageStream(true);
       Process process=processBuilder.start();
+      public String getProcess(Process process){return  process;}//Fetching Process
       public String getProcess(Process process){return process;}
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
