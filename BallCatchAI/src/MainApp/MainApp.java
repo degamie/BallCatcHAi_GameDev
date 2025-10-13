@@ -29,6 +29,8 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String out=null;
+    int res_cnt=out.size();
       public void Start(Stage Stage)throws Exception{//Start Funct Declare
           processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
           Process process=processBuilder.start();//Starting New Process
