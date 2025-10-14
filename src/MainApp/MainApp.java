@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(11/10/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(12/10/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -16,7 +16,9 @@ public class MainApp extends Application {//inheriting Application
 
       processBuilder.redirectErrorMessageStream(true);
       Process process=processBuilder.start();
+      public String getProcess(Process process){return  process;}//Fetching Process
       public String getProcess(Process process){return process;}
+        List<String>output=readProcess(process.getInputStream());
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
     public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
@@ -28,6 +30,8 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String out=null;
+    int res_cnt=out.size();
       public void Start(Stage Stage)throws Exception{//Start Funct Declare
           processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
           Process process=processBuilder.start();//Starting New Process
