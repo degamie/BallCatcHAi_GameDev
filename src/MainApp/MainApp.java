@@ -8,14 +8,17 @@ import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
-  //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)
+  //Work IN Dev Sarthak Mittal=(Degamiesign)(21/10/2025)
 public class MainApp extends Application {//inheriting Application
+    public MainApp(PerspectiveCamera camera,Group mdl1,Group mdl2,Scene scene){
+        this.camera=camera;
+        this.mdl1=mdl1;
+        this.mdl2=mdl2;
+        this.scene=scene;
+    }
   public Scene createScene(){//SceneCreation Method declare
     PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
     Camera camera=new Camera();//Camera obj declare
-    public String getCamera(Camera camera){
-      return camera;//Fethching Camera
-    }
     camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
   public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
   public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
@@ -25,6 +28,7 @@ public class MainApp extends Application {//inheriting Application
      Group root1=new Group(mdl1);//Root1 Obj declare
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
      scene.setCamera(camera);//Camera's Binding
+      scene.getCamera(camera);//Fetching Camera
      
      return Scene;//Printing Scene
   
@@ -52,25 +56,7 @@ public class MainApp extends Application {//inheriting Application
         }
 
  //Loading Ball Model AI_Character
-    public Group loadAICharacter(URL url){//loadAICharacter funct Declare
-        View view =new View();//View Obj declare
-        Group ModelRoot=new Group();//ModelReoot Obj declare
-        ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
-        importer.read(url);//Url obj's Input declare
-        ModelViewObject obj=import.importer.getImport();//Fetching the Import
-        modelRoot.getChildren().add(view);//Adding Obj View
-        return modelRoot;//Printing Model Root
-        animate(GroupModel);//Calling animate Func
-         }
-  //Animating AI_Character Model
-        public Group animate(Group model){//Animating 3d Model Declare
-           model.getChildren().stream()//Model's Children Stream's Fetching
-           .filter(view->view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
-           .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
-           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
-           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
-           rot.setByAngle(360)//Angular Rotation's Binding
-           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+
 //SCene Startup
        public void Start(Stage Stage)throws Exception{//Start Funct Declare
         Stage.setScene(createScrene());//Binding SceneCreation 
