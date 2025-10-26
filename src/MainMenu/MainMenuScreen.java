@@ -1,6 +1,6 @@
 import javax.swing.event.MenuEvent;
 
-//WID(19/10/2025)
+//WID(26z/10/2025)
 public class MainMenuScreen extends SimpleApplication{
     public String MainMenu(String[] args){
         MenuBar menuBar=new MenuBar();
@@ -8,6 +8,7 @@ public class MainMenuScreen extends SimpleApplication{
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public String getMenu(MenuBar menuBar){return menuBar;}//Fetching menuBar
 
         public String setMenu(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar
         filemenu.getItems().addAll(openMenu,SaveMenu,exitMenu);
