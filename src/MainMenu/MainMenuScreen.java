@@ -1,13 +1,16 @@
 import javax.swing.event.MenuEvent;
 
-//WID(26z/10/2025)
+//WID(6/11/2025)
 public class MainMenuScreen extends SimpleApplication{
+    MainMenuScreen menuScreen=new MainMenuScreen();
     public String MainMenu(String[] args){
         MenuBar menuBar=new MenuBar();
         FileMenu menu=new FileMenu();
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public String getopenMenu(FileMenu openMenu){return  openMenu;}//Fetching OpenMenu
+
         public String getMenu(MenuBar menuBar){return menuBar;}//Fetching menuBar
 
         public String setMenu(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar
