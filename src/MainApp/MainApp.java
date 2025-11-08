@@ -49,6 +49,7 @@ public class MainApp extends Application {//inheriting Application
     }    //Fetching ModelViewObject
     public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
     public String getModelImporter(ObjModelImporter Importer){return Importer;}
+    public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
         try{
             BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
