@@ -7,14 +7,21 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
+//Work IN Dev Sarthak Mittal=(Degamiesign)(16/11/2025)
   //Using JavaFX
-  //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)  //WID(13/09/2025)
+
 public class MainApp extends Application {//inheriting Application
+    int outputCnt=output.size();//Counting output's Size Declare
       ProcessBuilder processBuilder=new ProcessBuilder();
 
       processBuilder.redirectErrorMessageStream(true);
       Process process=processBuilder.start();
-      public String getProcess(Process process){return process;}
+      public String getProcess(Process process){return  process;}//Fetching Process
+     public String setProcess(Process process){this.process=process;}
+        List<String>output=readProcess(process.getInputStream());
+    public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
+    public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
+      public String getOutPut(List<String>output){return output;}//Fetching Output in app
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
     public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
@@ -26,9 +33,26 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public String out=null;
+    int res_cnt=out.size();
+      public void Start(Stage Stage)throws Exception{//Start Funct Declare
+          processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
+          Process process=processBuilder.start();//Starting New Process
+          Stage.setScene(createScrene());//Binding SceneCreation
+          Stage.show();//Displaying Stage's Scene
+
+      }
+      public String getModelRoot(Group ModelRoot){
+        return ModelRoot;
+      }
+      public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
+
     public String getModelViewObject(ModelViewObject obj){
         return obj;
     }    //Fetching ModelViewObject
+    public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
+    public String getModelImporter(ObjModelImporter Importer){return Importer;}
+    public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
         try{
             BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
@@ -37,13 +61,16 @@ public class MainApp extends Application {//inheriting Application
             }
         }
       }
+    public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
     public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
     public String  setScene(Scene scene){this.scene=scene;}
+
     public String getCamera(Camera camera){return camera;}
 
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
 
+    public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
     public String getMdl1(Group mdl1){
         return mdl1;
     }
@@ -117,17 +144,14 @@ public class MainApp extends Application {//inheriting Application
         public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
        this.objectModelImporter=objectModelImporter;
         }
-
+}
  //Loading Ball Model AI_Character
 
   //Animating AI_Character Model
 
 //SCene Startup
-       public void Start(Stage Stage)throws Exception{//Start Funct Declare
-        Stage.setScene(createScrene());//Binding SceneCreation
-        Stage.show();//Displaying Stage's Scene
-       }
-         }
+
+
 //Using Java3d
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
   // public BatchGroup Rootobj=new BatchGroup();
