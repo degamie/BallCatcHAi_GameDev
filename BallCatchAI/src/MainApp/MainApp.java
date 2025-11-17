@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(1/11/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(17/11/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -19,6 +19,9 @@ public class MainApp extends Application {//inheriting Application
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
         List<String>output=readProcess(process.getInputStream());
+    public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
+    public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
+      public String getOutPut(List<String>output){return output;}//Fetching Output in app
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
     public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
@@ -49,6 +52,7 @@ public class MainApp extends Application {//inheriting Application
     }    //Fetching ModelViewObject
     public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
     public String getModelImporter(ObjModelImporter Importer){return Importer;}
+    public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
         try{
             BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
@@ -57,8 +61,11 @@ public class MainApp extends Application {//inheriting Application
             }
         }
       }
+    public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
     public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
     public String  setScene(Scene scene){this.scene=scene;}
+    public String updateAllByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera iN Scene
+
     public String getCamera(Camera camera){return camera;}
 
       public String setView(View view){this.view=view;}//Binding View
