@@ -1,17 +1,27 @@
 import javax.swing.event.MenuEvent;
 
+//WID(21/11/2025)
 public class MainMenuScreen extends SimpleApplication{
+    MainMenuScreen menuScreen=new MainMenuScreen();
     public String MainMenu(String[] args){
         MenuBar menuBar=new MenuBar();
         FileMenu menu=new FileMenu();
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public String getexitMenu(FileMenu exitMenu){return exitMenu;}//Fetching exitMenu
+        public String getopenMenu(FileMenu openMenu){return  openMenu;}//Fetching OpenMenu
 
+        public String getMenu(MenuBar menuBar){return menuBar;}//Fetching menuBar
+        public String getSaveMenu(FileMenu SaveMenu){return SaveMenu;}//Fetching Save menu
+        public void setSaveMenu(FileMenu saveMenu){this.savemenu=SaveMenu;}//Binding SaveMemu in Server
+
+        public String setMenu(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar
         filemenu.getItems().addAll(openMenu,SaveMenu,exitMenu);
         MainMenuScreen(MenuBar menuBar){
             this.menuBar=menuBar;
         }
+
         public MenuEvent onMenuStrart(UserInput userInp,MenuBar menuBar,String[] path){
             while(userInp!=notifyAll()){   
                     if(!userInp.KEYBOARD_RIGHT_CLICK==null ||!userInp.KEYBOARD_LEFT_CLICK==null )openMenu.show();
@@ -25,12 +35,15 @@ public class MainMenuScreen extends SimpleApplication{
 
     }//     menuBar.getMenus().addAll(filemenu,editMenu,viewMenu,helpMenu);
           
-    public String EditMenu(String[] args){
+    public String EditMenu(String[] args,EditMenu editMenu,EditMenu soundMenu,EditMenu VideoMenu,EditMenu OptionsMenu){
         EditMenu editMenu=new EditMenu();
         EditMenu soundMenu=new FileMenu("soundMenu");
         EditMenu VideoMenu=new FileMenu("=VideoMenu");
         EditMenu OptionsMenu=new FileMenu("OptionsMenu");
 
         filemenu.getItems().addAll(editMenu,soundMenu,VideoMenu,OptionsMenu);
+    }
+    public String getEditMenu(String[] args,EditMenu editMenu,EditMenu soundMenu,EditMenu VideoMenu,EditMenu OptionsMenu){
+        EditMenu(args,editMenu,soundMenu,VideoMenu,OptionsMenu);
     }
 }
