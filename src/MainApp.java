@@ -7,13 +7,21 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
+//Work IN Dev Sarthak Mittal=(Degamiesign)(25/11/2025)
   //Using JavaFX
-  //Work IN Dev Sarthak Mittal=(Degamiesign)(09/08/2025)  //WID(13/09/2025)
+
 public class MainApp extends Application {//inheriting Application
+    int outputCnt=output.size();//Counting output's Size Declare
       ProcessBuilder processBuilder=new ProcessBuilder();
 
       processBuilder.redirectErrorMessageStream(true);
       Process process=processBuilder.start();
+      public String getProcess(Process process){return  process;}//Fetching Process
+     public String setProcess(Process process){this.process=process;}
+        List<String>output=readProcess(process.getInputStream());
+    public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
+    public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
+      public String getOutPut(List<String>output){return output;}//Fetching Output in app
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
     public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
@@ -25,9 +33,46 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
-      public String setView(View view){this.view=view;}//Binding View 
+    public String out=null;
+    int res_cnt=out.size();
+      public void Start(Stage Stage)throws Exception{//Start Funct Declare
+          processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
+          Process process=processBuilder.start();//Starting New Process
+          Stage.setScene(createScrene());//Binding SceneCreation
+          Stage.show();//Displaying Stage's Scene
+
+      }
+      public String getModelRoot(Group ModelRoot){
+        return ModelRoot;
+      }
+      public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
+
+    public String getModelViewObject(ModelViewObject obj){
+        return obj;
+    }    //Fetching ModelViewObject
+    public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
+    public String updateAllByModelViewObject(ModelViewObject obj){setModelViewObject(obj)+getModelViewObject(obj)+1;}//updating Model View Obj in App
+    public String getModelImporter(ObjModelImporter Importer){return Importer;}
+    public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
+      public List<String> readProcess(InputStream inputStream)throws IOException{
+        try{
+            BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
+                return output.lines()
+                        .collect(Collectors.toList());
+            }
+        }
+      }
+    public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
+    public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
+    public String  setScene(Scene scene){this.scene=scene;}
+    public String updateAllByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera iN Scene
+
+    public String getCamera(Camera camera){return camera;}
+
+      public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
 
+    public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
     public String getMdl1(Group mdl1){
         return mdl1;
     }
@@ -41,18 +86,18 @@ public class MainApp extends Application {//inheriting Application
       public Scene createScene(){//SceneCreation Method declare
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
-          camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
+          camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translat    ion
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
 
-     mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation 
+     mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation
      animate(model);//Animating Model
      Group root1=new Group(mdl1);//Root1 Obj declare
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
      scene.setCamera(camera);//Camera's Binding
-     
+
      return Scene;//Printing Scene
-  
+
   }
   //Ball Animation
   public class MainApp extends Ai_Character{//AI_Character Inherted Class
@@ -92,21 +137,24 @@ public class MainApp extends Application {//inheriting Application
         ModelViewObject obj=import.importer.getImport();//Fetching the Import
         modelRoot.getChildren().add(view);//Adding Obj View
         modelRoot=mdl2;
-        return modelRoot;//Printing Model Root 
+        return modelRoot;//Printing Model Root
         animateBallAi(mdl2);//Calling animate Func
         }
-
+        public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
+       return objectModelImporter;
+        }
+        public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
+       this.objectModelImporter=objectModelImporter;
+        }
+}
  //Loading Ball Model AI_Character
 
   //Animating AI_Character Model
 
 //SCene Startup
-       public void Start(Stage Stage)throws Exception{//Start Funct Declare
-        Stage.setScene(createScrene());//Binding SceneCreation 
-        Stage.show();//Displaying Stage's Scene 
-       }
-         }
-//Using Java3d 
+
+
+//Using Java3d
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
   // public BatchGroup Rootobj=new BatchGroup();
     // public TransformGroup transformGroup=new TransformGroup();
@@ -124,8 +172,8 @@ public class MainApp extends Application {//inheriting Application
     // public BatchGroup createSceneGraph(){//createSceneGraph Method Declare
     //     BatchGroup BatchGroup=new BoundingSphere(new Points3d(),1500.0);//BatchGroup Obj Declare
     //     ViewTrans ViewTrans=universe.getViewingPlatform.getView('Platform transform');//ViewTrans Obj Declare
-    // }      
-    
+    // }
+
     // public Canvas3d(GraphicsConfiguration GraphicsConfiguration,String OffScreen){//Canvas3d Param Constructor
     //     this.GraphicsConfiguration=GraphicsConfiguration;//Binding GraphicsConfiguration Node
     //     this.OffScreen=OffScreen;//Binding OffScreen Node
