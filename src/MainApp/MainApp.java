@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(13/11/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(30/11/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -19,6 +19,8 @@ public class MainApp extends Application {//inheriting Application
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
         List<String>output=readProcess(process.getInputStream());
+    public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
+    public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
       public String getOutPut(List<String>output){return output;}//Fetching Output in app
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
@@ -44,11 +46,12 @@ public class MainApp extends Application {//inheriting Application
         return ModelRoot;
       }
       public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
-
+        public String updateAllByModelRoot(Group ModelRoot){getModelRoot(ModelRoot)+setModelRoot(ModelRoot)+1;}//Updating Model Root in App
     public String getModelViewObject(ModelViewObject obj){
         return obj;
     }    //Fetching ModelViewObject
     public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
+    public String updateAllByModelViewObject(ModelViewObject obj){setModelViewObject(obj)+getModelViewObject(obj)+1;}//updating Model View Obj in App
     public String getModelImporter(ObjModelImporter Importer){return Importer;}
     public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
@@ -62,6 +65,7 @@ public class MainApp extends Application {//inheriting Application
     public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
     public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
     public String  setScene(Scene scene){this.scene=scene;}
+    public String updateAllByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera iN Scene
 
     public String getCamera(Camera camera){return camera;}
 
