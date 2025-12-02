@@ -1,5 +1,10 @@
-public class Ai_Character {//Ai_Character Cls Declare
+//WID(2/12/2025)
+public class Ai_Character {
+
+    public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
     public KeyBoardInput userInp=new KeyBoardInput();
+
+    public String getKeyBoardInput(KeyBoardInput userInp){return userInp;}//Fetching UserInput in AI_Character
     public String no_move=null;
     public State currState;
     public Ai_Character(){
@@ -22,7 +27,7 @@ public class Ai_Character {//Ai_Character Cls Declare
                 .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
                         rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
                         rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
-                        rot.setByAngle(360)//Angular Rotation's Binding
+                        rot.setByAngle(360)//Angular Rotation's Bin6ding
                         rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
     public Group animatelegs(Group model){//Animating 3d Model Declare
         model.getChildren().stream()//Model's Children Stream's Fetching
@@ -51,7 +56,7 @@ public class Ai_Character {//Ai_Character Cls Declare
             else move = "no UserInput";
         }return model.filter+move;
     }
-    public void Upoate*(){
+    public void Upoate(){
         if(currState==currState.MOVING)
     }
 }
