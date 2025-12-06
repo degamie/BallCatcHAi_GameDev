@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(30/11/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(6/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -71,6 +71,7 @@ public class MainApp extends Application {//inheriting Application
 
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
+    public String updateAllByView(View view){getView(view)+setView(view)+1;}//Updating View in App
 
     public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
     public String getMdl1(Group mdl1){
@@ -79,6 +80,9 @@ public class MainApp extends Application {//inheriting Application
     public String getScene(Scene scene){
         return scene;
     }
+    public String setScene(Scene scene){
+        this.scene=scene;
+    }//Binding Scene in App
     public String getStage(Stage stage){return stage;}
     public String setStage(Stage stage){
         this.stage=stage+"Stage  Binded Val";
