@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(6/12/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(7/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -18,6 +18,7 @@ public class MainApp extends Application {//inheriting Application
       Process process=processBuilder.start();
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
+    public String updateAllByProcess(Process process){getAllByProcess(process)+setProcess(process)+1};//Updating All Process iN App
         List<String>output=readProcess(process.getInputStream());
     public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
     public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
