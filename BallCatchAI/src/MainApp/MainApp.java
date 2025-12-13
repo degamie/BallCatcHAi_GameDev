@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(17/11/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(13/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -18,6 +18,8 @@ public class MainApp extends Application {//inheriting Application
       Process process=processBuilder.start();
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
+    public Scene updateByScene(Scene  scene){getScene(scene)+setScene(scene)+1;}//Updating Scene in App
+    public String updateAllByProcess(Process process){getAllByProcess(process)+setProcess(process)+1};//Updating All Process iN App
         List<String>output=readProcess(process.getInputStream());
     public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
     public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
@@ -46,11 +48,12 @@ public class MainApp extends Application {//inheriting Application
         return ModelRoot;
       }
       public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
-
+        public String updateAllByModelRoot(Group ModelRoot){getModelRoot(ModelRoot)+setModelRoot(ModelRoot)+1;}//Updating Model Root in App
     public String getModelViewObject(ModelViewObject obj){
         return obj;
     }    //Fetching ModelViewObject
     public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
+    public String updateAllByModelViewObject(ModelViewObject obj){setModelViewObject(obj)+getModelViewObject(obj)+1;}//updating Model View Obj in App
     public String getModelImporter(ObjModelImporter Importer){return Importer;}
     public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
@@ -70,6 +73,7 @@ public class MainApp extends Application {//inheriting Application
 
       public String setView(View view){this.view=view;}//Binding View
     public Stirng getView(View view){return  view;}
+    public String updateAllByView(View view){getView(view)+setView(view)+1;}//Updating View in App
 
     public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
     public String getMdl1(Group mdl1){
@@ -78,6 +82,9 @@ public class MainApp extends Application {//inheriting Application
     public String getScene(Scene scene){
         return scene;
     }
+    public String setScene(Scene scene){
+        this.scene=scene;
+    }//Binding Scene in App
     public String getStage(Stage stage){return stage;}
     public String setStage(Stage stage){
         this.stage=stage+"Stage  Binded Val";
@@ -145,6 +152,7 @@ public class MainApp extends Application {//inheriting Application
         public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
        this.objectModelImporter=objectModelImporter;
         }
+        public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
 }
  //Loading Ball Model AI_Character
 
