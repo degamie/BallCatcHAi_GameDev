@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(12/12/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(15/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -56,6 +56,7 @@ public class MainApp extends Application {//inheriting Application
     public String updateAllByModelViewObject(ModelViewObject obj){setModelViewObject(obj)+getModelViewObject(obj)+1;}//updating Model View Obj in App
     public String getModelImporter(ObjModelImporter Importer){return Importer;}
     public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
+    public  String updateByModelImporter(ObjModelImporter Importer){getModelImporter(importer)+setModelImporter(importer)+1;}//updating ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
         try{
             BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
@@ -152,6 +153,7 @@ public class MainApp extends Application {//inheriting Application
         public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
        this.objectModelImporter=objectModelImporter;
         }
+        public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
 }
  //Loading Ball Model AI_Character
 
