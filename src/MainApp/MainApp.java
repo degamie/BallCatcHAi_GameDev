@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(15/12/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(17/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -126,35 +126,37 @@ public class MainApp extends Application {//inheriting Application
           return modelRoot;//Printing Model Root
           animate(GroupModel);//Calling animate Func
       }
-  }
       public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
-           mdl2.getChildren().stream()//Model's Children Stream's Fetching
-           .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
-           .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
-           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
-           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
-           rot.setByAngle(360)//Angular Rotation's Binding
-           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
- //Loading Ball Model
-   public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
-        View view =new View();//View Obj declare
-        Group ModelRoot=new Group();//ModelReoot Obj declare
-        ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
-        importer.read(url);//Url obj's Input declare
-        ModelViewObject obj=import.importer.getImport();//Fetching the Import
-        modelRoot.getChildren().add(view);//Adding Obj View
-        modelRoot=mdl2;
-        return modelRoot;//Printing Model Root
-        animateBallAi(mdl2);//Calling animate Func
-        }
-        public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
-       return objectModelImporter;
-        }
-        public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
-       this.objectModelImporter=objectModelImporter;
-        }
-        public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
-}
+          mdl2.getChildren().stream()//Model's Children Stream's Fetching
+                  .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
+                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
+                          rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
+                          rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
+                          rot.setByAngle(360)//Angular Rotation's Binding
+                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      //Loading Ball Model
+      public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
+          View view =new View();//View Obj declare
+          Group ModelRoot=new Group();//ModelReoot Obj declare
+          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
+          importer.read(url);//Url obj's Input declare
+          ModelViewObject obj=import.importer.getImport();//Fetching the Import
+          modelRoot.getChildren().add(view);//Adding Obj View
+          modelRoot=mdl2;
+          return modelRoot;//Printing Model Root
+          animateBallAi(mdl2);//Calling animate Func
+      }
+      public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
+          return objectModelImporter;
+      }
+      public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
+          this.objectModelImporter=objectModelImporter;
+      }
+      public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
+      public Group getAiChracter(Group loadAICharacter){loadAICharacter(url);}//Fetching Ai Character iN App
+  }
+
+//}
  //Loading Ball Model AI_Character
 
   //Animating AI_Character Model
