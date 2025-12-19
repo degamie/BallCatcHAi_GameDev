@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(17/12/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(19/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -68,6 +68,9 @@ public class MainApp extends Application {//inheriting Application
     public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
     public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
     public String  setScene(Scene scene){this.scene=scene;}
+    public String udpateByScene(String scene){
+      getScene(scene)+setScene(scene)+1;}//Updating Scene in App
+}
     public String updateAllByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera iN Scene
 
     public String getCamera(Camera camera){return camera;}
