@@ -1,6 +1,6 @@
 import javax.swing.event.MenuEvent;
 
-//WID(10/11/2025)
+//WID(24/12/2025)
 public class MainMenuScreen extends SimpleApplication{
     MainMenuScreen menuScreen=new MainMenuScreen();
     public String MainMenu(String[] args){
@@ -14,6 +14,9 @@ public class MainMenuScreen extends SimpleApplication{
 
         public String getMenu(MenuBar menuBar){return menuBar;}//Fetching menuBar
         public String getSaveMenu(FileMenu SaveMenu){return SaveMenu;}//Fetching Save menu
+        public String updateByMenu(FileMenu menu,MenuBar menuBar){getMenu(menuBar)+setmenu(menuBar)+1;}//updating Menu in App
+        public void setSaveMenu(FileMenu saveMenu){this.savemenu=SaveMenu;}//Binding SaveMemu in Server
+        public String updateAllbySaveMenu(FileMenu saveMenu){getSaveMenu(saveMenu)+set(SaveMenu)+1;}//UPDATING Save M
 
         public String setMenu(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar
         filemenu.getItems().addAll(openMenu,SaveMenu,exitMenu);
@@ -34,12 +37,15 @@ public class MainMenuScreen extends SimpleApplication{
 
     }//     menuBar.getMenus().addAll(filemenu,editMenu,viewMenu,helpMenu);
           
-    public String EditMenu(String[] args){
+    public String EditMenu(String[] args,EditMenu editMenu,EditMenu soundMenu,EditMenu VideoMenu,EditMenu OptionsMenu){
         EditMenu editMenu=new EditMenu();
         EditMenu soundMenu=new FileMenu("soundMenu");
         EditMenu VideoMenu=new FileMenu("=VideoMenu");
         EditMenu OptionsMenu=new FileMenu("OptionsMenu");
 
         filemenu.getItems().addAll(editMenu,soundMenu,VideoMenu,OptionsMenu);
+    }
+    public String getEditMenu(String[] args,EditMenu editMenu,EditMenu soundMenu,EditMenu VideoMenu,EditMenu OptionsMenu){
+        EditMenu(args,editMenu,soundMenu,VideoMenu,OptionsMenu);
     }
 }
