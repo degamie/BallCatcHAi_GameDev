@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(13/12/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(28/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -18,6 +18,7 @@ public class MainApp extends Application {//inheriting Application
       Process process=processBuilder.start();
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
+    public String existsByProcess(Process process){if(process>0)getProcess(process);else getProcess(0);}//Cheeckimg Process's Existence in App
     public Scene updateByScene(Scene  scene){getScene(scene)+setScene(scene)+1;}//Updating Scene in App
     public String updateAllByProcess(Process process){getAllByProcess(process)+setProcess(process)+1};//Updating All Process iN App
         List<String>output=readProcess(process.getInputStream());
@@ -42,13 +43,15 @@ public class MainApp extends Application {//inheriting Application
           Process process=processBuilder.start();//Starting New Process
           Stage.setScene(createScrene());//Binding SceneCreation
           Stage.show();//Displaying Stage's Scene
-
       }
       public String getModelRoot(Group ModelRoot){
         return ModelRoot;
       }
       public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
         public String updateAllByModelRoot(Group ModelRoot){getModelRoot(ModelRoot)+setModelRoot(ModelRoot)+1;}//Updating Model Root in App
+    public String updateByStage(String stage){
+          getStage(stage)+setStage(stage)+1;
+    }
     public String getModelViewObject(ModelViewObject obj){
         return obj;
     }    //Fetching ModelViewObject
@@ -56,6 +59,7 @@ public class MainApp extends Application {//inheriting Application
     public String updateAllByModelViewObject(ModelViewObject obj){setModelViewObject(obj)+getModelViewObject(obj)+1;}//updating Model View Obj in App
     public String getModelImporter(ObjModelImporter Importer){return Importer;}
     public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
+    public  String updateByModelImporter(ObjModelImporter Importer){getModelImporter(importer)+setModelImporter(importer)+1;}//updating ModelImporter in App
       public List<String> readProcess(InputStream inputStream)throws IOException{
         try{
             BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
@@ -67,6 +71,9 @@ public class MainApp extends Application {//inheriting Application
     public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
     public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
     public String  setScene(Scene scene){this.scene=scene;}
+    public String udpateByScene(String scene){
+      getScene(scene)+setScene(scene)+1;}//Updating Scene in App
+}
     public String updateAllByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera iN Scene
 
     public String getCamera(Camera camera){return camera;}
@@ -125,35 +132,37 @@ public class MainApp extends Application {//inheriting Application
           return modelRoot;//Printing Model Root
           animate(GroupModel);//Calling animate Func
       }
-  }
       public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
-           mdl2.getChildren().stream()//Model's Children Stream's Fetching
-           .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
-           .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
-           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
-           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
-           rot.setByAngle(360)//Angular Rotation's Binding
-           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
- //Loading Ball Model
-   public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
-        View view =new View();//View Obj declare
-        Group ModelRoot=new Group();//ModelReoot Obj declare
-        ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
-        importer.read(url);//Url obj's Input declare
-        ModelViewObject obj=import.importer.getImport();//Fetching the Import
-        modelRoot.getChildren().add(view);//Adding Obj View
-        modelRoot=mdl2;
-        return modelRoot;//Printing Model Root
-        animateBallAi(mdl2);//Calling animate Func
-        }
-        public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
-       return objectModelImporter;
-        }
-        public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
-       this.objectModelImporter=objectModelImporter;
-        }
-        public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
-}
+          mdl2.getChildren().stream()//Model's Children Stream's Fetching
+                  .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
+                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
+                          rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
+                          rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
+                          rot.setByAngle(360)//Angular Rotation's Binding
+                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      //Loading Ball Model
+      public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
+          View view =new View();//View Obj declare
+          Group ModelRoot=new Group();//ModelReoot Obj declare
+          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
+          importer.read(url);//Url obj's Input declare
+          ModelViewObject obj=import.importer.getImport();//Fetching the Import
+          modelRoot.getChildren().add(view);//Adding Obj View
+          modelRoot=mdl2;
+          return modelRoot;//Printing Model Root
+          animateBallAi(mdl2);//Calling animate Func
+      }
+      public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
+          return objectModelImporter;
+      }
+      public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
+          this.objectModelImporter=objectModelImporter;
+      }
+      public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
+      public Group getAiChracter(Group loadAICharacter){loadAICharacter(url);}//Fetching Ai Character iN App
+  }
+
+//}
  //Loading Ball Model AI_Character
 
   //Animating AI_Character Model
