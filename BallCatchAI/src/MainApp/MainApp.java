@@ -7,7 +7,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(28/12/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(30/12/2025)
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
@@ -38,6 +38,9 @@ public class MainApp extends Application {//inheriting Application
     }
     public String out=null;
     int res_cnt=out.size();
+    public Integer updateByOutput(Integer output){
+        getOutPut(output)+setOutPut(out)+1;
+    }
       public void Start(Stage Stage)throws Exception{//Start Funct Declare
           processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
           Process process=processBuilder.start();//Starting New Process
