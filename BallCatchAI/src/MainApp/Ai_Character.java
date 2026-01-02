@@ -1,12 +1,14 @@
-//WID(2/12/2025)
+//WID(2/1/2026)//DegamieSign
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
     public KeyBoardInput userInp=new KeyBoardInput();
-
+    public void setKeyBoardInput(KeyBoardInput userInp){this.userInp=userInp;}//binding KeyBoardInput in App
     public String getKeyBoardInput(KeyBoardInput userInp){return userInp;}//Fetching UserInput in AI_Character
     public String no_move=null;
     public State currState;
+    public   void setCurrState(State currState){return currState;}// Binding Current State in App
+    public State getCurrState(State currState){return currState;}//Fetching Current State in App
     public Ai_Character(){
         this.currState=currState.IDKE;
     }
