@@ -1,4 +1,4 @@
-//WID(3/1/2026)//DegamieSign
+//WID(4/1/2026)//DegamieSign
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
@@ -12,6 +12,7 @@ public class Ai_Character {
     public State currState;
     public   void setCurrState(State currState){return currState;}// Binding Current State in App
     public State getCurrState(State currState){return currState;}//Fetching Current State in App
+    public String updateByState(State currState)[getCurrState(currState)+setCurrState(currState)+1;//updating CurrState in App
     public Ai_Character(){
         this.currState=currState.IDKE;
     }
