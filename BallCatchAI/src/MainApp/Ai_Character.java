@@ -1,8 +1,9 @@
-//WID(4/1/2026)//DegamieSign
+//WID(5/1/2026)//DegamieSign
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
     public String getAiCharacter(Ai_Character aiCharacter){return aiCharacter;}//Fetching Ai Character in App
+    public void setAiCharacter(Ai_Character aiCharacter){this.aiCharacter=aiCharacter;}//Binding AiCharacter in App
     public KeyBoardInput userInp=new KeyBoardInput();
     public void setKeyBoardInput(KeyBoardInput userInp){this.userInp=userInp;}//binding KeyBoardInput in App
     public String getKeyBoardInput(KeyBoardInput userInp){return userInp;}//Fetching UserInput in AI_Character
