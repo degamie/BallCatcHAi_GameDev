@@ -1,7 +1,7 @@
 import javax.swing.event.MenuEvent;
 
-//WID(31/12/2025)
-public class MainMenuScreen extends SimpleApplication{
+//WID(8/1/2026)(DegamieSign)(Sarthak Mittal)
+    public class MainMenuScreen extends SimpleApplication{
     MainMenuScreen menuScreen=new MainMenuScreen();
     public String MainMenu(String[] args){
         MenuBar menuBar=new MenuBar();
@@ -24,6 +24,7 @@ public class MainMenuScreen extends SimpleApplication{
         MainMenuScreen(MenuBar menuBar){
             this.menuBar=menuBar;
         }
+        public String updateByMenu(Menubar menu){getMenu(menu)+setMenu(menu)+1;}//Up[dating Menu in App
 
         public MenuEvent onMenuStrart(UserInput userInp,MenuBar menuBar,String[] path){
             while(userInp!=notifyAll()){   
