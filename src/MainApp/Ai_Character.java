@@ -1,13 +1,28 @@
-//WID(9/12/2025)
+//WID(10/1/2026)//DegamieSign
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
+    public String getAiCharacter(Ai_Character aiCharacter){return aiCharacter;}//Fetching Ai Character in App
+    public void setAiCharacter(Ai_Character aiCharacter){this.aiCharacter=aiCharacter;}//Binding AiCharacter in App
+    public void existsByAiCharacter(Ai_Character aiCharacter){
+        if(aiCharacter.loadAICharacter(url)!=null)getAiCharacter(aiCharacter);
+        else getAiCharacter(0);
+    }
     public KeyBoardInput userInp=new KeyBoardInput();
-
+    public void setKeyBoardInput(KeyBoardInput userInp){this.userInp=userInp;}//binding KeyBoardInput in App
     public String getKeyBoardInput(KeyBoardInput userInp){return userInp;}//Fetching UserInput in AI_Character
+    public String updateByKeyBoardInput(KeyBoardInput userInp){
+        getKeyBoardInput(userInp)+setKeyBoardInput(userInp)+1;
+    }
+    public void existsByKeyBoardInput(KeyBoardInput userInp){
+        if(userInp.KEYBOARD_A!=null || userInp.KEYBOARD_D!=null)getKeyBoardInput(userInp);
+        else getKeyBoardInput(0);
+    }
     public String no_move=null;
     public State currState;
+    public   void setCurrState(State currState){return currState;}// Binding Current State in App
     public State getCurrState(State currState){return currState;}//Fetching Current State in App
+    public String updateByState(State currState)[getCurrState(currState)+setCurrState(currState)+1;//updating CurrState in App
     public Ai_Character(){
         this.currState=currState.IDKE;
     }
