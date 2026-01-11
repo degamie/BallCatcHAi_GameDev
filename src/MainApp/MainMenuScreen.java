@@ -1,7 +1,7 @@
 import javax.swing.event.MenuEvent;
 
-//WID(26/11/2025)
-public class MainMenuScreen extends SimpleApplication{
+//WID(8/1/2026)(DegamieSign)(Sarthak Mittal)
+    public class MainMenuScreen extends SimpleApplication{
     MainMenuScreen menuScreen=new MainMenuScreen();
     public String MainMenu(String[] args){
         MenuBar menuBar=new MenuBar();
@@ -10,10 +10,12 @@ public class MainMenuScreen extends SimpleApplication{
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
         public String getexitMenu(FileMenu exitMenu){return exitMenu;}//Fetching exitMenu
+        public void setexitMenu(FileMenu exitMenu){this.exitMenu=exitMenu;}//Bidning  ExitMenu in App
         public String getopenMenu(FileMenu openMenu){return  openMenu;}//Fetching OpenMenu
-
+    public String getMenuBar(MenuBar menubar){return menuBar;}//Fetching MenuBar in App
         public String getMenu(MenuBar menuBar){return menuBar;}//Fetching menuBar
         public String getSaveMenu(FileMenu SaveMenu){return SaveMenu;}//Fetching Save menu
+        public String updateByMenu(FileMenu menu,MenuBar menuBar){getMenu(menuBar)+setmenu(menuBar)+1;}//updating Menu in App
         public void setSaveMenu(FileMenu saveMenu){this.savemenu=SaveMenu;}//Binding SaveMemu in Server
         public String updateAllbySaveMenu(FileMenu saveMenu){getSaveMenu(saveMenu)+set(SaveMenu)+1;}//UPDATING Save M
 
@@ -22,6 +24,7 @@ public class MainMenuScreen extends SimpleApplication{
         MainMenuScreen(MenuBar menuBar){
             this.menuBar=menuBar;
         }
+        public String updateByMenu(Menubar menu){getMenu(menu)+setMenu(menu)+1;}//Up[dating Menu in App
 
         public MenuEvent onMenuStrart(UserInput userInp,MenuBar menuBar,String[] path){
             while(userInp!=notifyAll()){   
