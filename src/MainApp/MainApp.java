@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(10/1/2026)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(14/1/2026)
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -24,6 +24,10 @@ public class MainApp extends Application {//inheriting Application
         List<String>output=readProcess(process.getInputStream());
     public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
     public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
+    public void existsByOutput(List<String>output){
+        if(output>0)getOutPut(output);
+        else getOutPut(0);
+    }
       public String getOutPut(List<String>output){return output;}//Fetching Output in app
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
