@@ -1,6 +1,5 @@
+//WID(15/1/2026)(DegamieSign)(Sarthak Mittal)
 import javax.swing.event.MenuEvent;
-
-//WID(8/1/2026)(DegamieSign)(Sarthak Mittal)
     public class MainMenuScreen extends SimpleApplication{
     MainMenuScreen menuScreen=new MainMenuScreen();
     public String MainMenu(String[] args){
@@ -18,7 +17,7 @@ import javax.swing.event.MenuEvent;
         public String updateByMenu(FileMenu menu,MenuBar menuBar){getMenu(menuBar)+setmenu(menuBar)+1;}//updating Menu in App
         public void setSaveMenu(FileMenu saveMenu){this.savemenu=SaveMenu;}//Binding SaveMemu in Server
         public String updateAllbySaveMenu(FileMenu saveMenu){getSaveMenu(saveMenu)+set(SaveMenu)+1;}//UPDATING Save M
-
+        public String updateByOpenMenu(String OpenMenu){getopenMenu(openMenu)+setOpenmenu(openMenu)+1;}//Updating OpenMenu in Server
         public String setMenu(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar
         filemenu.getItems().addAll(openMenu,SaveMenu,exitMenu);
         MainMenuScreen(MenuBar menuBar){
