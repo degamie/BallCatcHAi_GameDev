@@ -1,9 +1,10 @@
-//WID(10/1/2026)//DegamieSign
+//WID(16/1/2026)//DegamieSign(Sarthak Mittal)(#1.1)
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
     public String getAiCharacter(Ai_Character aiCharacter){return aiCharacter;}//Fetching Ai Character in App
     public void setAiCharacter(Ai_Character aiCharacter){this.aiCharacter=aiCharacter;}//Binding AiCharacter in App
+    public String updateByAiCharacter(Ai_Character aiCharacter){getAiCharacter(aiCharacter)+setAiCharacter(aiCharacter)+1;}//Updating AiCharacter in  App
     public void existsByAiCharacter(Ai_Character aiCharacter){
         if(aiCharacter.loadAICharacter(url)!=null)getAiCharacter(aiCharacter);
         else getAiCharacter(0);
