@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(14/1/2026)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(17/1/2026)
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -13,7 +13,7 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
 public class MainApp extends Application {//inheriting Application
     int outputCnt=output.size();//Counting output's Size Declare
       ProcessBuilder processBuilder=new ProcessBuilder();
-
+public int getOutputCnt(int outputCnt){return outputCnt;}//Fethcing Output Cnt in Server
       processBuilder.redirectErrorMessageStream(true);
       Process process=processBuilder.start();
       public String getProcess(Process process){return  process;}//Fetching Process
