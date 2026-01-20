@@ -14,6 +14,7 @@ public class MainApp extends Application {//inheriting Application
           Camera camera=new Camera();//Camera obj declare
           public Camera getCamera(Camera camera){return camera;}//Fetching Camera in App
           public void setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
+          public void updateByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//updating Camera in App
           camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
