@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(19/08/2025)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(20/1/2026)
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -13,6 +13,7 @@ public class MainApp extends Application {//inheriting Application
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
           public Camera getCamera(Camera camera){return camera;}//Fetching Camera in App
+          public void setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
           camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
