@@ -1,4 +1,4 @@
-//WID(22/01/2026)(Sarthak Mittal)(degamieSign)
+//WID(24/01/2026)(Sarthak Mittal)(degamieSign)
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
     public String MainMenu(String[] args){
@@ -7,6 +7,7 @@ public class MainMenuScreen extends SimpleApplication{
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public FileMenu getOpenMenu(FileMenu openMenu){return openMenu;}//Fetching OpenMenu in App
         public Strng getmenu(FileMenu menu){return menu;}
         public void setMenu(FileMenu openMenu){this.openmenu=openMenu;}//Binding OpenMenu in App
 
