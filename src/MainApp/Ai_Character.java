@@ -1,4 +1,4 @@
-//WID(16/1/2026)//DegamieSign(Sarthak Mittal)(#1.1)
+//WID(4/2/2026)//DegamieSign(Sarthak Mittal)(#1.1).1
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
@@ -24,6 +24,7 @@ public class Ai_Character {
     public   void setCurrState(State currState){return currState;}// Binding Current State in App
     public State getCurrState(State currState){return currState;}//Fetching Current State in App
     public String updateByState(State currState)[getCurrState(currState)+setCurrState(currState)+1;//updating CurrState in App
+    public State existsBYCurrState(State currState){if(currState!=null)getCurrState(currState);else getCurrState(null);}//Checking CurrState's Existence IN App
     public Ai_Character(){
         this.currState=currState.IDKE;
     }
