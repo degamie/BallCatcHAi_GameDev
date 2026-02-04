@@ -1,4 +1,4 @@
-//WID(15/1/2026)(DegamieSign)(Sarthak Mittal)
+//WID(4/2/2026)(DegamieSign)(Sarthak Mittal)#1.1.1
 import javax.swing.event.MenuEvent;
     public class MainMenuScreen extends SimpleApplication{
     MainMenuScreen menuScreen=new MainMenuScreen();
@@ -8,6 +8,9 @@ import javax.swing.event.MenuEvent;
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public void setMenuBar(MenuBar menubar){this.menubar=menubar;}//Binding MEnuBar in App
+        public MenuBar getMenuBar(MenuBar menubar){return menuBar;}//Fetching MenuBar in App
+        public FileMenu getexitMenu(exitMenu){return exitMenu;}//Fetching exitMenu in App
         public String getexitMenu(FileMenu exitMenu){return exitMenu;}//Fetching exitMenu
         public void setexitMenu(FileMenu exitMenu){this.exitMenu=exitMenu;}//Bidning  ExitMenu in App
         public String getopenMenu(FileMenu openMenu){return  openMenu;}//Fetching OpenMenu
@@ -18,6 +21,12 @@ import javax.swing.event.MenuEvent;
         public void setSaveMenu(FileMenu saveMenu){this.savemenu=SaveMenu;}//Binding SaveMemu in Server
         public String updateAllbySaveMenu(FileMenu saveMenu){getSaveMenu(saveMenu)+set(SaveMenu)+1;}//UPDATING Save M
         public String updateByOpenMenu(String OpenMenu){getopenMenu(openMenu)+setOpenmenu(openMenu)+1;}//Updating OpenMenu in Server
+        public String existsByOpenMenu(String OpenMenu){
+            if(openMenu!=null){
+                getopenMenu(openMenu);
+            }
+            else getopenMenu(0);
+        }
         public String setMenu(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar
         filemenu.getItems().addAll(openMenu,SaveMenu,exitMenu);
         MainMenuScreen(MenuBar menuBar){
