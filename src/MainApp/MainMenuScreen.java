@@ -10,6 +10,7 @@ public class MainMenuScreen extends SimpleApplication{
         EditMenu soundMenu=new FileMenu("soundMenu");
         EditMenu VideoMenu=new FileMenu("=VideoMenu");
         EditMenu OptionsMenu=new FileMenu("OptionsMenu");
+        public EditMenu getVideoMenu(EditMenu VideoMenu){return VideoMenu;}
         public EditMenu getOptionsMenu(EditMenu opionsMenu){
              return opionsMenu;
         }
@@ -25,7 +26,8 @@ public class MainMenuScreen extends SimpleApplication{
         public void updateByExitMenu(FileMenu exitMenu){getMenuScreen(exitMenu)+setMenuScreen(exitMenu)+1;}
         public   FileMenu getExit(FileMenu exitMenu){return exitMenu;}//Fethcing ExitMenu in App
         public void setOpenMenu(FileMenu openMenu){this.openMenu=openMenu;}//Binding OpenMenu in App
-        public FileMenu getMenu(FileMenu menu){return menu;}//Fetching Menu in App
+        public FileMenu getMenu(FileMenu menu){return menu;}//Fetching Men
+        // u in App
         public FileMenu getSaveMenu(FileMenu saveMenu){return saveMenu;}//Fetching SaveMenu in App
         public void setsaveMenu(FileMenu SaveMenu){return SaveMenu;}//Binding SaveMenu in App
         public FileMenu getOpenMenu(FileMenu openMenu){return openMenu;}//Fetching OpenMenu in App
