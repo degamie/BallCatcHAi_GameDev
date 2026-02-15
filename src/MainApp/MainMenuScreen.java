@@ -1,7 +1,9 @@
-//WID(11/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1
+//WID(15/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1
 
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
+    public MainMenuScreen getMainMenu(MainMenuScreen mainMenuScreen){return mainMenuScreen;}
+    public void setVideoMenu(EditMenu videoMenu){this.videoMenu=videoMenu;}
     public void updateByMenuScreen(MainMenuScreen menuScreen){getMenuScreen(menuScreen)+setMenuScreen(menuScreen)+1;}//Updating MenuScreen in App
     public void setMenuScreen(MainMenuScreen menuScreen){this.menuScreen=menuScreen;}//Binding MenuScreen in App
     public MainMenuScreen getMenuScreen(MainMenuScreen menuScreen){return menuScreen;}
