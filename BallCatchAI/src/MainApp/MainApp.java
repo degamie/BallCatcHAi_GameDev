@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(17/02/2026)#1.1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(17/02/2026)#1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -10,6 +10,9 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
     public Mainapp mainapp=new MainApp();
+    public void existsByMainApp(MainApp mainApp){
+        if(mainApp!=null)getMainapp(mainApp);else getMainapp(null);
+    }
     public MainApp getMainapp(MainApp mainApp){return mainApp;}
     public void setMainapp(MainApp mainapp){this.mainapp=mainapp;}
       public MainApp updateByMainapp(MainApp mainApp){
