@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(06/02/2026)#1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(17/02/2026)#1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -10,7 +10,12 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
     public Mainapp mainapp=new MainApp();
+    public MainApp getMainapp(MainApp mainApp){return mainApp;}
     public void setMainapp(MainApp mainapp){this.mainapp=mainapp;}
+      public MainApp updateByMainapp(MainApp mainApp){
+        getMainapp(mainApp)+setMainapp(mainApp)+1;
+        return mainApp;
+      }
       public Scene createScene(){//SceneCreation Method declare
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
@@ -35,6 +40,7 @@ public class MainApp extends Application {//inheriting Application
   
   }
   public String getScene(Scene scene) {return scene;}
+      public String updateByScene(Scene scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
       public void setScene(Scene scene){this.scene=scene;}//Binding Scene in App
   //Ball Animation
   public class MainApp extends Ai_Character{//AI_Character Inherted Class
