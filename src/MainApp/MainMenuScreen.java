@@ -1,4 +1,4 @@
-//WID(15/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1
+//WID(18/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.1c
 
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
@@ -12,6 +12,7 @@ public class MainMenuScreen extends SimpleApplication{
         EditMenu soundMenu=new FileMenu("soundMenu");
         EditMenu VideoMenu=new FileMenu("=VideoMenu");
         EditMenu OptionsMenu=new FileMenu("OptionsMenu");
+        public EditMenu getOptionsMenu(EditMenu OptionsMenu){return OptionsMenu;}//Fethcing Options Menu in App
         public EditMenu getVideoMenu(EditMenu VideoMenu){return VideoMenu;}
         public EditMenu getOptionsMenu(EditMenu opionsMenu){
              return opionsMenu;
