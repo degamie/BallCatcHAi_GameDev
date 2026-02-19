@@ -1,4 +1,4 @@
-//WID(18/02/2026)(Sarthak Mittal)(DegamieSign)#1.1.1
+//WID(19/02/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1c 
 import javax.swing.plaf.nimbus.State;
 public class Ai_Character {
     public Ai_Character updateByAiChar(Ai_Character aiCharacter){getAiCharacter(aiCharacter)+setAiCharacter(aiCharacter)+1;}
@@ -13,7 +13,8 @@ public void setCurrState(State currState){this.currState=currState;}
         return currState;
     }
 
-    public Ai_Character(){
+    public Ai_Character(Ai_Character aiCharacter){
+        this.aiCharacter=aiCharacter;
         this.currState=currState.IDKE;
     }
     public void Upoate*(){
