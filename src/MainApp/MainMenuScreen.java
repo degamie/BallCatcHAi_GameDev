@@ -1,5 +1,5 @@
-//WID(19/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1 
-
+//WID(20/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1
+        
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
     public MainMenuScreen getMainMenu(MainMenuScreen mainMenuScreen){return mainMenuScreen;}
@@ -17,6 +17,7 @@ public class MainMenuScreen extends SimpleApplication{
         public EditMenu getOptionsMenu(EditMenu opionsMenu){
              return opionsMenu;
         }
+        public EditMenu setOptionsMenu(EditMenu OptionsMenu){this.OptionsMenu=OptionsMenu;}//Binding OptionsMEnu in App
 
         filemenu.getItems().addAll(editMenu,soundMenu,VideoMenu,OptionsMenu);
     }
