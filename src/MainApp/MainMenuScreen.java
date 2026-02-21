@@ -1,7 +1,8 @@
-//WID(21/2/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C
+//WID(21/2/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1
 import javax.swing.event.MenuEvent;
     public class MainMenuScreen extends SimpleApplication{
     MainMenuScreen menuScreen=new MainMenuScreen();
+    public void setMainMenu(MainMenuScreen menuScreen){this.menuScreen=menuScreen;}//Binding MainMenu Screen In App
     public MainMenuScreen getMainMenu(MainMenuScreen menuScreen){return  menuScreen;}//Fetching MainMenuScreen in App
     public String MainMenu(String[] args){
         MenuBar menuBar=new MenuBar();
