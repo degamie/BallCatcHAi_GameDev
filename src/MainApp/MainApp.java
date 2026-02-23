@@ -1,4 +1,4 @@
-//WIP(20/2/2026)(Sarthak Mittal)#1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(23/02/2026)#1.1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -8,36 +8,68 @@ import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
-  //Work IN Dev Sarthak Mittal=(Degamiesign)(12/11/2025)#1
 public class MainApp extends Application {//inheriting Application
-    public MainApp(PerspectiveCamera camera,Group mdl1,Group mdl2,Scene scene){
-        this.camera=camera;
-        this.mdl1=mdl1;
-        this.mdl2=mdl2;
-        this.scene=scene;
+    public Mainapp mainapp=new MainApp();
+    public void udpateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in App
+    public void existsByMainApp(MainApp mainApp){
+        if(mainApp!=null)getMainapp(mainApp);else getMainapp(null);
     }
-  public Scene createScene(){//SceneCreation Method declare
-    PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
-    Camera camera=new Camera();//Camera obj declare
-    camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
-      public PerspectiveCamera getPerspectiveCamera(PerspectiveCamera PerspectiveCamera){return PerspectiveCamera;}//Fethcing PerspectiveCamera In A[[
-  public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
-  public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
+    public MainApp getMainapp(MainApp mainApp){return mainApp;}
+    public void setMainapp(MainApp mainapp){this.mainapp=mainapp;}
+      public MainApp updateByMainapp(MainApp mainApp){
+        getMainapp(mainApp)+setMainapp(mainApp)+1;
+        return mainApp;
+      }
+      public Scene createScene(){//SceneCreation Method declare
+          PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
+          Camera camera=new Camera();//Camera obj declare
+          public Camera getCamera(Camera camera){return camera;}//Fetching Camera in App
+          public void setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
+          public void updateByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//updating Camera in App
+          public MainApp existsByMainApp(MainApp mainapp){if(mainapp!=nullget
+          camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
+          public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
+          public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
 
      mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation
-      mdl1.setTransforms().add(new Rotate(180,RootTreeNodeAdapter.Z_AXIS));//Model's 180 degree Z-Axis Rotation
+          public String getModel(Model mdl1){
+              return mdl1;
+          }
      animate(model);//Animating Model
      Group root1=new Group(mdl1);//Root1 Obj declare
+          public void setRoot1(Group root1){this.root1=root1;}//bindning Root1 in App
+          public String getRoot1(Group root1){return root1;}
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
-      public void setScene(scene){this.scene=scene;}//Binding Scene in App
      scene.setCamera(camera);//Camera's Binding
-      scene.getCamera(camera);//Fetching Camera
      
      return Scene;//Printing Scene
   
   }
+  public String getScene(Scene scene) {return scene;}
+      public String updateByScene(Scene scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
+      public void setScene(Scene scene){this.scene=scene;}//Binding Scene in App
   //Ball Animation
-  public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
+  public class MainApp extends Ai_Character{//AI_Character Inherted Class
+      public Group animateAI(Group model){//Animating 3d Model Declare
+          model.getChildren().stream()//Model's Children Stream's Fetching
+                  .filter(view->view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
+                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
+                          rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
+                          rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
+                          rot.setByAngle(360)//Angular Rotation's Binding
+                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      public Group loadAICharacter(URL url){//loadAICharacter funct Declare
+          View view =new View();//View Obj declare
+          Group ModelRoot=new Group();//ModelReoot Obj declare
+          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
+          importer.read(url);//Url obj's Input declare
+          ModelViewObject obj=import.importer.getImport();//Fetching the Import
+          modelRoot.getChildren().add(view);//Adding Obj View
+          return modelRoot;//Printing Model Root
+          animate(GroupModel);//Calling animate Func
+      }
+  }
+      public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
            mdl2.getChildren().stream()//Model's Children Stream's Fetching
            .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
            .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
@@ -59,6 +91,8 @@ public class MainApp extends Application {//inheriting Application
         }
 
  //Loading Ball Model AI_Character
+
+  //Animating AI_Character Model
 
 //SCene Startup
        public void Start(Stage Stage)throws Exception{//Start Funct Declare
