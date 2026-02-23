@@ -15,7 +15,7 @@ public class MainApp extends Application {//inheriting Application
         if(mainApp!=null)getMainapp(mainApp);else getMainapp(null);
     }
     public MainApp getMainapp(MainApp mainApp){return mainApp;}
-    public void setMainapp(MainApp mainapp){this.mainapp=mainapp;}
+    public void setMainapp(MainAppC mainapp){this.mainapp=mainapp;}
       public MainApp updateByMainapp(MainApp mainApp){
         getMainapp(mainApp)+setMainapp(mainApp)+1;
         return mainApp;
