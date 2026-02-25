@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(17/02/2026)#1.1.1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(25/02/2026)#1.1.1.1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -10,11 +10,12 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
     public Mainapp mainapp=new MainApp();
+    public void udpateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in App
     public void existsByMainApp(MainApp mainApp){
         if(mainApp!=null)getMainapp(mainApp);else getMainapp(null);
     }
     public MainApp getMainapp(MainApp mainApp){return mainApp;}
-    public void setMainapp(MainApp mainapp){this.mainapp=mainapp;}
+    public void setMainapp(MainAppC mainapp){this.mainapp=mainapp;}
       public MainApp updateByMainapp(MainApp mainApp){
         getMainapp(mainApp)+setMainapp(mainApp)+1;
         return mainApp;
@@ -25,16 +26,18 @@ public class MainApp extends Application {//inheriting Application
           public Camera getCamera(Camera camera){return camera;}//Fetching Camera in App
           public void setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
           public void updateByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//updating Camera in App
+          public MainApp existsByMainApp(MainApp mainapp){if(mainapp!=nullget
           camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
-
+        public Group getmdl1(Group mdl1){return mdl1;}//Fethcing Mdl1 in App
      mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation
           public String getModel(Model mdl1){
               return mdl1;
           }
      animate(model);//Animating Model
      Group root1=new Group(mdl1);//Root1 Obj declare
+          public void setRoot1(Group root1){this.root1=root1;}//bindning Root1 in App
           public String getRoot1(Group root1){return root1;}
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
      scene.setCamera(camera);//Camera's Binding
@@ -55,6 +58,7 @@ public class MainApp extends Application {//inheriting Application
                           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
                           rot.setByAngle(360)//Angular Rotation's Binding
                           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      public void existsByScene(Scene scene){if(scene!=null)getScene(scene);else getScene(null);}
       public Group loadAICharacter(URL url){//loadAICharacter funct Declare
           View view =new View();//View Obj declare
           Group ModelRoot=new Group();//ModelReoot Obj declare
