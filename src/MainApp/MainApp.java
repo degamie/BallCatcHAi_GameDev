@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(23/02/2026)#1.1.1.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)(26/02/2026)#1.1.1.1.1.1.1.1,1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -9,6 +9,8 @@ import javax.swing.text.View;
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
+      public Group getModelRoot(Group ModelRoot){return ModelRoot; }//Fethcing ModelRoot in App
+
     public Mainapp mainapp=new MainApp();
     public void udpateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in App
     public void existsByMainApp(MainApp mainApp){
@@ -30,7 +32,7 @@ public class MainApp extends Application {//inheriting Application
           camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
-
+        public Group getmdl1(Group mdl1){return mdl1;}//Fethcing Mdl1 in App
      mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation
           public String getModel(Model mdl1){
               return mdl1;
@@ -58,6 +60,7 @@ public class MainApp extends Application {//inheriting Application
                           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
                           rot.setByAngle(360)//Angular Rotation's Binding
                           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      public void existsByScene(Scene scene){if(scene!=null)getScene(scene);else getScene(null);}
       public Group loadAICharacter(URL url){//loadAICharacter funct Declare
           View view =new View();//View Obj declare
           Group ModelRoot=new Group();//ModelReoot Obj declare
@@ -81,6 +84,7 @@ public class MainApp extends Application {//inheriting Application
    public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
         View view =new View();//View Obj declare
         Group ModelRoot=new Group();//ModelReoot Obj declare
+
         ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
         importer.read(url);//Url obj's Input declare
         ModelViewObject obj=import.importer.getImport();//Fetching the Import
