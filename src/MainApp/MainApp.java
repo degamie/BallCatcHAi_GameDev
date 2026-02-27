@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)(26/02/2026)#1.1.1.1.1.1.1.1,1.1.1    
+    //Work IN Dev Sarthak Mittal=(Degamiesign)(27/02/2026)#1.1.1.1.1.1.1.1,1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -45,6 +45,7 @@ public class MainApp extends Application {//inheriting Application
           public String getRoot1(Group root1){return root1;}
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
      scene.setCamera(camera);//Camera's Binding
+              scene.getCamera(camera);//Camera's Bididng in App
      
      return Scene;//Printing Scene
   
