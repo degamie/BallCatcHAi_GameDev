@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)(27/02/2026)#1.1.1.1.1.1.1.1,1.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)(28/02/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -9,6 +9,10 @@ import javax.swing.text.View;
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
+    public void existsByMainApp(MainApp mainApp){
+        if(mainApp!=null)getMainapp(mainApp);
+        else getMainapp(null);//Chekcing MainApp's Existence in App
+    }
     public List<MainApp> updateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in BallCatchAi
     public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot in App
       public Group getModelRoot(Group ModelRoot){return ModelRoot; }//Fethcing ModelRoot in App
