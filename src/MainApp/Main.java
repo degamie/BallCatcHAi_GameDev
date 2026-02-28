@@ -1,0 +1,279 @@
+//WID(28/2/2026)//Sarthak Mittal Aka Degamiesign #1.1.1#1.1.1.1CC.1.1 #1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1C 
+
+package com.WeightMeasuringSfxMachine;
+
+import javax.swing.text.View;
+
+import java.awt.Menu;
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Main {
+    public String weigthName=null;
+    public String getWeigthName(String WeightName){return  WeightName;}//Fetching WeightName in App
+    public Integer weightbatteryVal=0;
+    public List<Main> existsBYBatteryVal(Integer weightbatteryVal){if(weightbatteryVal!=null)getWeightbatteryVal(weightbatteryVal);else getWeightbatteryVal(null);}
+    public Integer updateByBatteryVal(Integer weightbatteryVal){getWeightbatteryVal(weightbatteryVal)+setWeightbatteryVal(weightbatteryVal);}//Updating BatteryVal in App
+    public void setWeightbatteryVal(Integer weightbatteryVal){this.weightbatteryVal=weightbatteryVal;}//Bidning WeigthBatteryLvl in App
+    public Integer getWeightbatteryVal(Integer weightbatteryVal){return weightbatteryVal;}// Fetching weightbatteryVal in App
+    public Integer weightSerailNum=0;
+    public void existsBySerialNum(Integer weightSerailNum){if(weightSerailNum>0)getWeightSerailNum(weightSerailNum);else getWeightSerailNum(0);}//Checking WeightSerialNum's Existence in App #1
+    public Integer updateBySerialNum(Integer weightSerailNum){
+       getWeightSerailNum(weightSerailNum)+setWeightSerailNum(weightSerailNum)+1;
+    }
+    public void setWeightSerailNum(Integer weightSerailNum){this.weightSerailNum=weightSerailNum;}//Bidning WeightSerialNum in App
+    public Integer getWeightSerailNum(Integer weightSerailNum){return weightSerailNum;}//Fethcing weightSerailNum in App
+    public Integer WieghtUnit;
+    public WieghtUnit updateByWeightUnit(Integer WieghtUnit){getWeight_unit(weight_unit)+setWeight_unit(weight_unit)+1;}//Updating WeightUnit in App
+    public void existsByWeightUnit(Integer WieghtUnit){if(weight_unit!=0)getWeight_unit(weight_unit);else getWeight_unit(0);}
+    public void setWieghtUnit(Integer wieghtUnit){this.WieghtUnit=wieghtUnit;}
+    public Integer getWeightUnit(Integer wieghtUnit){return WieghtUnit;}
+    public Time weighttime=null;
+    public void existsByWieghtTime(Time weighttime){
+        if(weighttime!=null)getWeighttime( weighttime );
+        else getWeighttime( null );
+    }
+    public Time updateByWeightTime(Time weighttime){getWeighttime( weighttime )+setWeighttime(weighttime)+1;}//updating WeightTime inApp
+    public void setWeighttime(Time weighttime){this.weighttime=weighttime;}//Binding WeightTime in App
+    public Time getWeighttime(Time weighttime){return weighttime;}//Fethcing WerightTime in App
+    public Main main=new Main();
+    public Main updateByMain(Main main){getMain(main)+setMain(main)+1;}
+    public void setMain(Main main){this.main=main;}
+    public Main getMain(Main main){return main;}//Fetching main in App
+    public View weight_View;
+    public void existsByManiN(Main main){if(main!=null)getMain(main);else getMain(null);}//Checking Main's Existence in app
+    public Main updateByWeightTime(Time weighttime){getWeighttime( weighttime)+setByweightTime(weighttime)+1;}//Updating WeightTime in App
+    public void setByweightTime(Time weighttime){this.weighttime=weighttime;}//Bidnidng WiegthTime in App
+    public void setWeightVIew(View weight_View){this.weight_view=weight_View;}
+    public View getWeight_View(View weight_View){return weight_View;}
+    public View updateByWeightView(View weight_View){getWeight_View(weight_View)+setWeightVIew(weight_View)+1;}//Updating Weight View in App
+    public void existsBymain(Main main){if(main!=null)getMain(main);else getMain(null);}//Checking Main's Existence in App
+    public Main(Integer measure_edge,View weight_View){
+        this.machine_stmt=machine_stmt;
+        this.weight_menu=weight_menu;
+        this.sfx=sfx;
+        this.measure_segment=measure_segment;
+        this.weight_View=weight_View;
+        this.weightcnt=weightcnt;
+        this.weightcnt=weightcnt;
+        this.weight_view=weight_view;
+        this.measure_edge=measure_edge;
+    }
+    public Integer getWeightView(Integer WeightView){return WeightView;}//Fetching WeightView in App
+    public void existsByView(View view){if (view!=null)getViews(view);else getViews(null);}//Checking View in App
+    public void existsByweightMenu(Menu weightMenu){
+        if(weightMenu!=null)getweight_menu(weight_menu);
+        else getweight_menu(null);
+    }
+    public void existsByMain(Main main){if(main!=null)getMain(main);else getMain(null);}//Checking Main's Existence iN App
+    public void updateByweightmenu(Menu weightmenu){getweight_menu(weight_menu)+setWeight_menu(weight_menu)+1;}//Updating WeightMenu in App
+    public void setWeightMenu(Menu weightMenu){this.weight_menu=weight_menu;}//Binding WeightMenu in App
+    public Menu getWeightMenu(Menu weightMenu){return weightMenu;}//Fethcing WeightMenu in App
+    public Integer getSfx(Integer sfx){return sfx;}
+    public Integer measure_edge=0;
+    public void setMeasure_edge(Integer measure_edge){this.measure_edge=measure_edge;}//Binding measure edge in App
+    public Integer getMeasure_edge(Integer measure_edge){return measure_edge;}// Fetching MeasureEdge in App
+    public   Integer updateBymeaureEdge(Integer measure_edge){getMeasure_edge(measure_edge)+setMeasure_edge(measure_edge)+1;}//Measureedge's Update in App
+    public void existsBymeasureEdge(Integer measure_edge)={if(measure_edge>0)getMeasure_edge(measure_edge);else getMeasure_edge(0);}//Checking Measure edge in App
+    public Integer measure_segment=0;
+    public Integer weightcnt;public View weight_view=null;public int weight_unit=0;
+    public int getWeight_unit(int weight_unit){return weight_unit;}
+    public void setWeight_view(View weight_View){this.Weight_View=weight_View;}//binding WeightView in App
+    public Integer getMeasure_segment(Integer measure_segment){return measure_segment;}//measureSegment's Fetching in App
+    public void setMeasure_segment(Integer measure_segment){this.measure_segment=measure_segment;}//Binding measureSegment in App
+    public String updateByMeasure_segment(Integer measure_segment){getMeasure_segment(measure_segment)+setMeasure_segment(measure_segment)+1;}//updating MeasureSegament in App
+    public String existsBymeasure_segment(Integer measure_segment){if(measure_segment.length!=0)getMeasure_segment(measure_segment);else getMeasure_segment(0);}//Checking Measure Segment in App
+    public int weight_view=0;
+    public void setWeight_view(int weight_view){this.weight_view=weight_view;}//binding WeightView in App
+    public int getWeightView(int weight_view){
+        return weight_view;
+    }
+    public void updateByweightView(int weight_view){getWeightView(weight_view)+setWeight_view(weight_view)+1;}//Updating WeightView in App
+    public void existsByWeightView(int weight_view){
+        if(weight_view.length()>0)getWeight_View(weight_view);
+        else getWeight_View(0);
+    }
+    weightcnt=0;
+
+    public void setWeightcnt(Integer weightcnt){this.weightcnt=weightcnt;}//Binding WeightCount in App
+    public Integer getWeightcnt(Integer weightcnt){return weightcnt;}//Fetching WeightCount in Server
+    public Integer updateByWieghtCount(Integer weightcnt){
+        getWeightcnt(weightcnt)+setWeightcnt(weightcnt)+1;
+        return weightcnt;
+    }
+    public void existsByWeightCount(Integer WeightCount){
+        if(weightcnt>0)getWeightcnt(weightcnt);
+        else getWeightcnt(0);
+    }
+    public Main main;
+    public View Weight_View;
+    public View  getWeight_View(int weight_View){return weight_View;}// WeightView's Fetching
+    public void setWeight_View(View Weight_View){this.Weight_View=Weight_View;}//Biding Weight View in App
+    public void updateByWeightView(View weight_View){getWeight_View(weight_View)+setWeight_View(Weight_View)+1;}//Updating Weight View in App
+    public void existsByWieghtView(View weight_View){
+        if(weight_View>0)getWeight_View(weight_View);
+        else getWeight_View(0);
+
+    }
+    public ArrayList<String>weight_menu=new ArrayList<>();
+    public String weight_unit=null;
+    public Integer getWeightUnit(Integer weightunnit){return weightunnit;}
+
+    public void existsByweightCnt(Integer weightcnt){if(weightcnt>0)getWeightcnt(weightcnt);else getWeightcnt(0);}//Chekcing weightCnt's Ex
+    public void setWeight_menu(ArrayList<String>weight_menu){this.weight_menu=weight_menu;}//Bidning Wieght Menu
+    public void updateByWeightMenu(ArrayList<String>weight_menu){getweight_menu(weight_menu)+setWeight_menu(weight_menu)+1;}//Updating WeightMenu in App
+    public String existsByWeightMenu(ArrayList<String> weight_menu){if(weight_menu.size()>0)getweight_menu(weight_menu);else getweight_menu(0);}//Updating Weight Menu in App
+    public ArrayList<String> getweight_menu(ArrayList<String>weight_menu){return weight_menu;}//Printing Wieght menu in ir.
+    public ArrayList<String>weight_menu(ArrayList<String>weight_menu){getweight_menu(weight_menu)+setWeight_menu(weight_menu)+1;}//Updating weight_menu in Server
+    public String getWeight_unit(String weight_unit){return weight_unit;}
+    public void  setWeight_unit(String weight_unit){ this.weight_unit;}//Binding  Weight Unit
+    public String updateAllByweight_unit(String weight_unit){getWeight_unit(weight_unit)+setWeight_Unit(weight_unit)+1;}//udpating Weight Unit
+//    public String updateAllByWeight_unit(String weight_unit){getWeight_unit(weight_unit)+setWeight_unit(weight_unit)+1;}//Updating WiegthWUnit In App #1
+
+     public Integer accuracy=0;
+     public void setAccuracy(Integer accuracy){this.accuracy=accuracy;}
+     public Integer getAccuracy(Integer accuracy){
+         return accuracy;
+     }
+     public Integer updateAllByAccuracy(Integer accuracy){getAccuracy(accuracy)+setAccuracy(accuracy);}
+    public void existsByWeightUnit(Integer weight_unit){
+         if(weight_unit>0)getWeight_Unit(weight_unit);
+         else getWeight_Unit(0);
+    }
+    public String existByaccuracy(Integer accuracy){
+         if(accuracy>0)getAccuracy(accuracy);
+         else getAccuracy(0);
+    }
+    public Integer Sfx=0;
+     public Integer setSfx(Integer Sfx){this.Sfx=Sfx;}
+     public Integer getSfx(Integer sfx){
+         return sfx;
+     }
+    public Integer updateAllBySfx(Integer Sfx){getSfx(Sfx)+setSfx(Sfx)+1;}//Updating Sfx In Server
+//    public Integer existsBySfx(Integer sfx)
+    public  String  existsBySfx(Integer Sfx){
+        if(Sfx>0)getSfx(Sfx);
+        else getSfx(0);
+        return "SFX Exists in App";
+    }
+    public  String machine_stmt=null;
+    public String getMachine_stmt(int machine_stmt){
+        return machine_stmt;
+    }
+    public Integer setMachine_stmt(Integer Sfx){
+        this.Sfx=Sfx;
+    }
+     public String updateAllBYMachineStmt(String machine_stmt){getMachine_stmt(machine_stmt)+setMachine_stmt(machine_stmt);}
+    public void existsbyMachineStmt(Integer machine_stmt){
+        if(machine_stmt>0)getMachine_stmt(machine_stmt);
+        else getMachine_stmt(0);
+    }   
+
+    public Integer Weight_val=0;
+     public Integer getWieghtVal(Integer Weight_val){
+         return Weight_val;
+     }
+    public void setWeight_val(Integer Weight_val){
+        this.Weight_val=Weight_val;
+    }//bidning Weight_Val
+    public Integer updateAllByWeightVal(Integer Weight_val){
+        getWieghtVal(Weight_val)+setWeight_val(Weight_val)+1;
+        return Weight_val;
+    }
+    public void existsByWeightVal(Integer Weight_Val){
+         if(Weight_Val>0)getWieghtVal(Weight_Val);
+         else getWieghtVal(0);
+    }
+
+    public String getWeight_Unit(int weight_unit){
+        return weight_unit;
+    }
+    public void setWeight_Unit(int weight_unit){this.weight_unit=weight_unit;}//Binidng Weight Unit in App
+    public String updateAllByWeightUnit(String weight_unit){getWeight_unit(weight_unit)+setWeight_Unit(weight_unit)+1;}//Updating Weight Unit in Server
+    //public String updateAllByWeightUnit(String Weight_Unit){getWeight_unit(weight_unit)+setWeight_Unit(weight_unit)+1;}//Updating Weight Unit in App
+//    public String getWeight_val(Integer Weight_val){
+//        return Weight_val;
+//    }
+
+
+
+
+    public Integer weight_Detect(String weight_unit,Integer Wight_val,String machine_stmt){
+        while(Wight_val!=0) {
+            if (Wight_val > 0 && Wight_val == 0 && weight_unit == "KG" || weight_unit == "Gram" || weight_unit == "t" || weight_unit == "tonne" || weight_unit == "oz" || weight_unit == "lb")
+                Wight_val = Integer.valueOf(weight_unit.concat(Wight_val, weight_unit));
+            Sfx += 1;
+            machine_stmt = "mid Weight";
+            else
+            if (Wight_val > 5 && Wight_val == 5 && weight_unit == "KG" || weight_unit == "Gram" || weight_unit == "t" || weight_unit == "tonne" || weight_unit == "oz" || weight_unit == "lb")
+                Wight_val = Integer.valueOf(weight_unit.concat(Wight_val, weight_unit));
+            Sfx += 2;
+            machine_stmt = "OverWeight1";
+            else
+            if (Wight_val > 15 && Wight_val == 0 && weight_unit == "KG" || weight_unit == "Gram" || weight_unit == "t" || weight_unit == "tonne" || weight_unit == "oz" || weight_unit == "lb")
+                Wight_val = Integer.valueOf(weight_unit.concat(Wight_val, weight_unit));
+            Sfx += 2;
+            machine_stmt = "OverWeight2";
+            else
+            if (Wight_val > 25 && Wight_val == 25 && weight_unit == "KG" || weight_unit == "Gram" || weight_unit == "t" || weight_unit == "tonne" || weight_unit == "oz" || weight_unit == "lb")
+                Wight_val = Integer.valueOf(weight_unit.concat(Wight_val, weight_unit));
+            Sfx += 3;
+            machine_stmt = "OverWeight3";
+            else
+            if (Wight_val > 50 && Wight_val == 50 && weight_unit == "KG" || weight_unit == "Gram" || weight_unit == "t" || weight_unit == "tonne" || weight_unit == "oz" || weight_unit == "lb")
+                Wight_val = Integer.valueOf(weight_unit.concat(Wight_val, weight_unit));
+            Sfx += 4;
+            machine_stmt = "OverWeight4";
+        }
+    }
+    public Integer updateAllByweightDetect(String weight_unit,Integer Wight_val,String machine_stmt){
+         getweight_Detect(weight_unit,Wight_val,machine_stmt)+setWieghtDetect(weight_unit,Wight_val,machine_stmt)+1;
+    }
+    public void existsByWeightDetect(String weight_unit,Integer Wight_val,String machine_stmt){
+         if(weight_unit !=null && Weight_val>0 && machine_stmt !=null){
+             getweight_Detect(weight_unit,Wight_val,machine_stmt);
+         }
+         else  getweight_Detect(0,0,0);
+    }
+    public void setWieghtDetect(String weight_unit,Integer Wight_val,String machine_stmt){this.weight_Detect(weight_unit,machine_stmt,Wight_val)=weight_Detect(weight_unit,machine_stmt,Wight_val);}//binding Weight Detect in App
+    public String getweight_Detect(String weight_unit,Integer Wight_val,String machine_stmt){weight_Detect(0,5,"Overiwieght1")+1;  }//Fethcing Weight Detec in tApp
+
+    public Integer weight_accuracy(Integer accuracy){//wieght_accuracy declare
+        //Calculating  Weight Detect's Accuracy Iteratively
+        while(accuracy!=0){
+            if(weight_Detect(weight_unit, Weight_val, machine_stmt)==0){
+                accuracy=0;
+
+            }
+            else if (weight_Detect(weight_unit, Weight_val, machine_stmt)==5)accuracy=25;
+            else if (weight_Detect(weight_unit, Weight_val, machine_stmt)==15)accuracy=50;
+            else if (weight_Detect(weight_unit, Weight_val, machine_stmt)==25)accuracy=75;
+            else if (weight_Detect(weight_unit, Weight_val, machine_stmt)==50)accuracy=100;
+        }return accuracy;
+    }
+    public Integer getAccuracy(Integer accuracy){weight_accuracy(accuracy);}//Fetching Accuracy in App
+    public Integer setAccuracy(Integer accuracy){this.accuracy=accuracy;}//Binding Accuracy in App
+    public Integer existsByaccuracy(Integer accuracy){if(accuracy>0)getAccuracy(accuracy);else getAccuracy(0);}//Checking Accuracy's Existence in App
+    public Integer updateByaccuracy(Integer accuracy){getAccuracy(accuracy)+setAccuracy(accuracy)+1;}//updating Accuracy in App
+    public Integer weightMeasure(Integer Weight_val, Integer accuracy){
+        weight_Detect(weight_unit,Weight_val,machine_stmt)+ this.accuracy;
+    }
+    public Integer getAllByWeightMeasure(Integer Weight_val, Integer accuracy){weightMeasure( Weight_val,  accuracy);}
+    public Integer setAllByWeightMeasure(Integer Weight_val, Integer accuracy){this.weightMeasure(Weight_val,accuracy)=weightMeasure(Weight_val,accuracy);}
+    public Integer updateByweightMeasure(Integer Weight_val,Integer accuracy){getAllByWeightMeasure(Weight_val,accuracy)+setAllByWeightMeasure(Weight_val,accuracy)+1;}//Updating Weight's measure on App
+    public  String  existsByWeightMeasure(Integer Weight_val,Integer accuracy){if(Weight_val>0)getAllByWeightMeasure(Weight_val,accuracy);else getAllByWeightMeasure(0,0);}//Checking Weight Measure  Existence in App
+
+    public Integer Weight_Display(String machine_stmt,Integer Sfx,Integer accuracy){
+        weight_Detect(weight_unit,Weight_val,machine_stmt)+weightMeasure(accuracy)+System.out.println(Sfx);
+    }
+    public Integer updatebyweightDisplay(String machine_stmt,Integer Sfx,Integer accuracy){
+        Weight_Display(machine_stmt,Sfx,accuracy)+1;
+    }
+    public Integer updateByWeightVal(Integer weight_val){getWieghtVal(weight_val)+setWeight_val(weight_val)+1;}//Updating Weight Val in App
+    public  void existsByWeightVal(Integer weight_val){if(weight_val>0)getWieghtVal(weight_val);else getWieghtVal(0);}//Checking WeightVal's Existence in App
+    public String getWeightVal(Integer WeightVal){return WeightVal;}//Fetching WeightVal in App
+    }
+//        public static void main(String[] args) {
+
