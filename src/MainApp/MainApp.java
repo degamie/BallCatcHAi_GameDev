@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)(28/02/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)(01/03/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C 
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -58,27 +58,39 @@ public class MainApp extends Application {//inheriting Application
       public String updateByScene(Scene scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
       public void setScene(Scene scene){this.scene=scene;}//Binding Scene in App
   //Ball Animation
-  public class MainApp extends Ai_Character{//AI_Character Inherted Class
-      public Group animateAI(Group model){//Animating 3d Model Declare
+  public class MainApp extends Ai_Character {//AI_Character Inherted Class
+
+      public Group animateAI(Group model) {//Animating 3d Model Declare
           model.getChildren().stream()//Model's Children Stream's Fetching
-                  .filter(view->view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
-                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
+                  .filter(view -> view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
+                  .foreach(view -> RotateTransition rot = new RotateTransition(Duration.seconds(.33), view)//Rotating Obj's Durational Rotation
                           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
                           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
                           rot.setByAngle(360)//Angular Rotation's Binding
-                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
-      public void existsByScene(Scene scene){if(scene!=null)getScene(scene);else getScene(null);}
-      public Group loadAICharacter(URL url){//loadAICharacter funct Declare
-          View view =new View();//View Obj declare
-          Group ModelRoot=new Group();//ModelReoot Obj declare
-          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
+                          rot.setInterpolator(Interpolator.LINEAR))
+      }
+
+      ;//Linear Rotational Interpolaration Binding
+
+      public void existsByScene(Scene scene) {
+          if (scene != null) getScene(scene);
+          else getScene(null);
+      }
+
+      public Group loadAICharacter(URL url) {//loadAICharacter funct Declare
+          View view = new View();//View Obj declare
+          Group ModelRoot = new Group();//ModelReoot Obj declare
+          ObjModelImporter importer = new ObjModelImporter();//ObjModelImporter Obj declare
           importer.read(url);//Url obj's Input declare
-          ModelViewObject obj=import.importer.getImport();//Fetching the Import
+          ModelViewObject obj =import.importer.getImport();//Fetching the Import
           modelRoot.getChildren().add(view);//Adding Obj View
           return modelRoot;//Printing Model Root
           animate(GroupModel);//Calling animate Func
       }
   }
+      }
+      public void setView(View view) {this.view=view;}
+
       public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
            mdl2.getChildren().stream()//Model's Children Stream's Fetching
            .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
