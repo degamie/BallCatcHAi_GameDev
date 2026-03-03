@@ -1,4 +1,4 @@
-//WID(03/2/2026)//DegamieSign(Sarthak Mittal)(#1.1).1.1.1.1c    
+//WID(04/2/2026)//DegamieSign(Sarthak Mittal)(#1.1).1.1.1.1.1C  
 public class Ai_Character {
 
     public Ai_Character aiCharacter;//Ai_Character Cls nd Obj Declare
@@ -33,6 +33,7 @@ public class Ai_Character {
         View view =new View();//View Obj declare
         public void setView(View view){this.view=view;}//Bidning VIew in App
         public View getView(View view){return view;}//Fethcing View In App
+        public Group getModelRoot(Group mdlRoot){return mdlRoot;}
         Group ModelRoot=new Group();//ModelReoot Obj declare
         ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
         importer.read(url);//Url obj's Input declare
