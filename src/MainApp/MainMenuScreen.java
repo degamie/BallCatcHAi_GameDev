@@ -1,7 +1,12 @@
-//WID(27/02/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1
+//WID(03/03/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1
         
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
+    public void existsByeditMenu(EditMenu editMenu){
+        if(editMenu!=null)getEdit(editMenu);
+        else getEditMenu(null);
+    }
+//    public EditMenu existsByMainMenu(EditMenu MainM)
     public void updateByMenuScreen(MainMenuScreen mainMenuScreen){getMainMenu(menuScreen)+setMenuScreen(menuScreen)+1;}//udpating MainMenuScreen in App
     public void setVideoMenu(EditMenu videoMenu){this.VideoMenu=VideoMenu;}//Bidnidng VideoMenu in App
     public EditMenu getVideoMenu(EditMenu VideoMenu){return VideoMenu;}//Fetching VideoMenu in App
@@ -31,6 +36,7 @@ public class MainMenuScreen extends SimpleApplication{
         filemenu.getItems().addAll(editMenu,soundMenu,VideoMenu,OptionsMenu);
     }
     public String MainMenu(String[] args){
+        public void updateByMenuBar(Menubar menubar){getMenuBar(menuBar)+setmenuBar(MenuBar)+1;}//updating Menubar in App
         public void setmenuBar(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar in App
         MenuBar menuBar=new MenuBar();
         FileMenu menu=new FileMenu();
