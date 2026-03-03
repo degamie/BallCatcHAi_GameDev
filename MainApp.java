@@ -1,4 +1,4 @@
-
+//Work IN Dev Sarthak Mittal=(Degamiesign)3/03/2026)#1cC
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -7,22 +7,31 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-//Work IN Dev Sarthak Mittal=(Degamiesign)(19/12/2025)
+
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
+    public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//binding outputcnt in App
     int outputCnt=output.size();//Counting output's Size Declare
+    public int getOutputCnt(int outputCnt){return  outputCnt;}//Fethcing OutputCnt in App
       ProcessBuilder processBuilder=new ProcessBuilder();
 
+      public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//Bindig OutputCnt in App
+      public int getOutputCnt(int outputCnt){return outputCnt;}//Fethcing Output Cnt in Server
       processBuilder.redirectErrorMessageStream(true);
       Process process=processBuilder.start();
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
+    public String existsByProcess(Process process){if(process>0)getProcess(process);else getProcess(0);}//Cheeckimg Process's Existence in App
     public Scene updateByScene(Scene  scene){getScene(scene)+setScene(scene)+1;}//Updating Scene in App
     public String updateAllByProcess(Process process){getAllByProcess(process)+setProcess(process)+1};//Updating All Process iN App
         List<String>output=readProcess(process.getInputStream());
     public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
     public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
+    public void existsByOutput(List<String>output){
+        if(output>0)getOutPut(output);
+        else getOutPut(0);
+    }
       public String getOutPut(List<String>output){return output;}//Fetching Output in app
     ProccessBuilder proccessBuilder=new ProccessBuilder("python",
             resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
@@ -37,6 +46,9 @@ public class MainApp extends Application {//inheriting Application
     }
     public String out=null;
     int res_cnt=out.size();
+    public Integer updateByOutput(Integer output){
+        getOutPut(output)+setOutPut(out)+1;
+    }
       public void Start(Stage Stage)throws Exception{//Start Funct Declare
           processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
           Process process=processBuilder.start();//Starting New Process
@@ -48,6 +60,10 @@ public class MainApp extends Application {//inheriting Application
       }
       public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
         public String updateAllByModelRoot(Group ModelRoot){getModelRoot(ModelRoot)+setModelRoot(ModelRoot)+1;}//Updating Model Root in App
+    public void existByModelRoot(Group ModelRoot){
+        if(ModelRoot>0)getModelRoot(ModelRoot);
+        else getModelRoot(0);
+    }
     public String updateByStage(String stage){
           getStage(stage)+setStage(stage)+1;
     }
