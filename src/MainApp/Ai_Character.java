@@ -1,6 +1,7 @@
-//WID(03/03/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1.1.1.1.1.1.1
+//WID(04/03/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1.1.1.1.1.1.1.1.1x
 import javax.swing.plaf.nimbus.State;
 public class Ai_Character {
+    public Ai_Character aiCharacter;
     public Ai_Character updateByAiCharacter(Ai_Character aiCharacter){getAiCharacter(aiCharacter)+setAiCharacter(aiCharacter)+1;}//Updating AiCharacter in Apo
     public Ai_Character existsByAiChar(Ai_Character aiCharacter){if(aiCharacter>null)getAiCharacter(aiCharacter);else getAiCharacter(null);}//Checking AICHar's Exsitnece in App
     public Ai_Character aiCharacter;
