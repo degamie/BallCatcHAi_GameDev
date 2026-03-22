@@ -1,4 +1,4 @@
-//WIP(03/03/2026)(Sarthak Mittal)#1,1.1
+//WIP(22/03/2026)(Sarthak Mittal)#1,1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -10,6 +10,9 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
   //Work IN Dev Sarthak Mittal=(Degamiesign)(12/11/2025)#1
 public class MainApp extends Application {//inheriting Application
+    public MainApp existsBYCamera(PerspectiveCamera camera){
+        if(camera!=null)getCamera(camera);else getCamera(null);//Checking Camera's Existence in App
+    }
     public void updateByCamera(PerspectiveCamera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera in App
     public MainApp(PerspectiveCamera camera,Group mdl1,Group mdl2,Scene scene){
         this.camera=camera;
