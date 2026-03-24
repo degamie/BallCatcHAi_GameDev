@@ -1,6 +1,7 @@
-//WID(22/03/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1
+//WID(24/03/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1
 import javax.swing.event.MenuEvent;
     public class MainMenuScreen extends SimpleApplication{
+        public void setMenuScreen(MainMenuScreen menuScreen){this.menuScreen=menuScreen;}
         public SimpleApplication getSimpleApplication() {
             return simpleApplication;
         }
