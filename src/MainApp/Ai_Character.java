@@ -1,4 +1,4 @@
-//WID(04/03/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1.1.1.1.1.1.1.1.1x
+//WID(25/03/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1.1.1.1.1.1.1.1.1x.1
 import javax.swing.plaf.nimbus.State;
 public class Ai_Character {
     public Ai_Character aiCharacter;
@@ -16,6 +16,7 @@ public class Ai_Character {
         if(CurrState!=null)getAiCharacter(CurrState);
         else getAiCharacter(null);
     }
+    public State getCurrState(State currState){return  currState;}
 public void setCurrState(State currState){this.currState=currState;}
     public State getCurrState() {
         return currState;
