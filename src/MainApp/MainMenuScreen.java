@@ -1,7 +1,11 @@
-//WID(28/03/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1
+//WID(31/03/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1
         
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
+    public void existsByMenuScreen(MainMenuScreen mainMenuScreen){
+        if(mainMenuScreen!=null)getmainMenuScreen(mainMenuScreen);
+        else getmainMenuScreen(null);
+    }
     public void existsByeditMenu(EditMenu editMenu){
         if(editMenu!=null)getEdit(editMenu);
         else getEditMenu(null);
