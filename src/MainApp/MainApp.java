@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(27/03/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C
+    //Work IN Dev Sarthak Mittal=(Degamiesign)02/04/2026)#1cC.1.1.1.1C
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -7,124 +7,193 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.text.View;
 
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
-  //Using JavaFX
-public class MainApp extends Application {//inheriting Application
-    public void existsByMainApp(MainApp mainApp){
-        if(mainApp!=null)getMainapp(mainApp);
-        else getMainapp(null);//Chekcing MainApp's Existence in App
-    }
-    public List<MainApp> updateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in BallCatchAi
-    public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot in App
-      public Group getModelRoot(Group ModelRoot){return ModelRoot; }//Fethcing ModelRoot in App
 
-    public Mainapp mainapp=new MainApp();
-    public void udpateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in App
-    public void existsByMainApp(MainApp mainApp){
-        if(mainApp!=null)getMainapp(mainApp);else getMainapp(null);
+  //Using JavaFX
+
+public class MainApp extends Application {//inheriting Application
+    public void setModelRoot(ModelRoot modelRoot){this.modelRoot=modelRoot;}
+    public ModelRoot modelRoot=new ModelRoot();
+
+    public ModelRoot getModelRoot() {
+        return modelRoot;
     }
-    public MainApp getMainapp(MainApp mainApp){return mainApp;}
-    public void setMainapp(MainAppC mainapp){this.mainapp=mainapp;}
-      public MainApp updateByMainapp(MainApp mainApp){
-        getMainapp(mainApp)+setMainapp(mainApp)+1;
-        return mainApp;
+
+    public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//binding outputcnt in App
+    int outputCnt=output.size();//Counting output's Size Declare
+    public int getOutputCnt(int outputCnt){return  outputCnt;}//Fethcing OutputCnt in App
+      ProcessBuilder processBuilder=new ProcessBuilder();
+
+      public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//Bindig OutputCnt in App
+      public int getOutputCnt(int outputCnt){return outputCnt;}//Fethcing Output Cnt in Server
+      processBuilder.redirectErrorMessageStream(true);
+      Process process=processBuilder.start();
+      public String getProcess(Process process){return  process;}//Fetching Process
+     public String setProcess(Process process){this.process=process;}
+    public String existsByProcess(Process process){if(process>0)getProcess(process);else getProcess(0);}//Cheeckimg Process's Existence in App
+    public Scene updateByScene(Scene  scene){getScene(scene)+setScene(scene)+1;}//Updating Scene in App
+    public String updateAllByProcess(Process process){getAllByProcess(process)+setProcess(process)+1};//Updating All Process iN App
+        List<String>output=readProcess(process.getInputStream());
+    public void setOutPut(List<String>output){this.output=output;}//Binding Output in app
+    public String updateAllByOutpuut(List<String>output){getOutput(output)+setOutPut(output)+1;}//Updating Output in App
+    public void existsByOutput(List<String>output){
+        if(output>0)getOutPut(output);
+        else getOutPut(0);
+    }
+      public String getOutPut(List<String>output){return output;}//Fetching Output in app
+    ProccessBuilder proccessBuilder=new ProccessBuilder("python",
+            resolvePythonScriptPath(CdssConstants.CLASSIFY_INSTANCE_SCRIPT_FILE),classifierPath,pathInputFile
+    public MainApp(Group mdl1,Group mdl2,Group root1,Scene scene,View view,ModelViewObject obj,Stage Stage){
+        this.mdl1=mdl1;
+        this.mdl2=mdl2;
+        this.root1=root1;
+        this.scene=scene;
+        this.view=view;
+        this.obj=obj;
+        this.stage=stage;
+    }
+    public String getOut(String Out){return Out;}//Fetching OutPut in App
+    public String out=null;
+    int res_cnt=out.size();
+    public Integer updateByOutput(Integer output){
+        getOutPut(output)+setOutPut(out)+1;
+    }
+      public void Start(Stage Stage)throws Exception{//Start Funct Declare
+          processBuilder.redirectErrorStream(true);//Redirecting Exceptional Error Messages
+          Process process=processBuilder.start();//Starting New Process
+          Stage.setScene(createScrene());//Binding SceneCreation
+          Stage.show();//Displaying Stage's Scene
       }
+      public String getModelRoot(Group ModelRoot){
+        return ModelRoot;
+      }
+      public void setModelRoot(Group ModelRoot){this.ModelRoot=ModelRoot;}//Binding ModelRoot
+        public String updateAllByModelRoot(Group ModelRoot){getModelRoot(ModelRoot)+setModelRoot(ModelRoot)+1;}//Updating Model Root in App
+    public void existByModelRoot(Group ModelRoot){
+        if(ModelRoot>0)getModelRoot(ModelRoot);
+        else getModelRoot(0);
+    }
+    public String updateByStage(String stage){
+          getStage(stage)+setStage(stage)+1;
+    }
+    public String getModelViewObject(ModelViewObject obj){
+        return obj;
+    }    //Fetching ModelViewObject
+    public String setModelViewObject(ModelViewObject obj){this.obj=obj;}//Binding obj
+    public String updateAllByModelViewObject(ModelViewObject obj){setModelViewObject(obj)+getModelViewObject(obj)+1;}//updating Model View Obj in App
+    public String getModelImporter(ObjModelImporter Importer){return Importer;}
+    public void setModelImporter(ObjModelImporter importer){this.Importer=Importer;}//Binding ModelImporter in App
+    public  String updateByModelImporter(ObjModelImporter Importer){getModelImporter(importer)+setModelImporter(importer)+1;}//updating ModelImporter in App
+      public List<String> readProcess(InputStream inputStream)throws IOException{
+        try{
+            BufferedReader output=new BufferedReader(new InputStreamReader.inputStream){
+                return output.lines()
+                        .collect(Collectors.toList());
+            }
+        }
+      }
+    public String getScene(Scene scene){return scene;}//Fetching Scene in Game's App
+    public String setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
+    public String  setScene(Scene scene){this.scene=scene;}
+    public String udpateByScene(String scene){
+      getScene(scene)+setScene(scene)+1;}//Updating Scene in App
+}
+    public String updateAllByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//Updating Camera iN Scene
+
+    public String getCamera(Camera camera){return camera;}
+
+      public String setView(View view){this.view=view;}//Binding View
+    public Stirng getView(View view){return  view;}
+    public String updateAllByView(View view){getView(view)+setView(view)+1;}//Updating View in App
+
+    public String setMdl1(Group mdl1b){this.mdl1=mdl1;}
+    public String getMdl1(Group mdl1){
+        return mdl1;
+    }
+    public String getScene(Scene scene){
+        return scene;
+    }
+    public String setScene(Scene scene){
+        this.scene=scene;
+    }//Binding Scene in App
+    public String getStage(Stage stage){return stage;}
+    public String setStage(Stage stage){
+        this.stage=stage+"Stage  Binded Val";
+    }
       public Scene createScene(){//SceneCreation Method declare
-        public PerspectiveCamera getPerspectiveCamera(PerspectiveCamera){return PerspectiveCamera;}
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
-          public Camera getCamera(Camera camera){return camera;}//Fetching Camera in App
-          public void setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
-          public void updateByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//updating Camera in App
-          public MainApp existsByMainApp(MainApp mainapp){if(mainapp!=nullget
-          camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
+          camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translat    ion
           public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
           public  Group mdl2=loadAICharacter(getClass().getResources("AI_CHARACTER.fbx"));//Mdl1 and 2 Obj declare
-        public Group getmdl1(Group mdl1){return mdl1;}//Fethcing Mdl1 in App
+
      mdl1.getTransforms().add(new Rotate(90,RootTreeNodeAdapter.Y_AXIS));//Model's 90 degree Y-Axis Rotation
-          public String getModel(Model mdl1){
-              return mdl1;
-          }
      animate(model);//Animating Model
      Group root1=new Group(mdl1);//Root1 Obj declare
-          public void setRoot1(Group root1){this.root1=root1;}//bindning Root1 in App
-          public String getRoot1(Group root1){return root1;}
      Scene scene=new Scene(root,1280,720,true);//Scene Obj Declare
      scene.setCamera(camera);//Camera's Binding
-              scene.getCamera(camera);//Camera's Bididng in App
-     
-     return Scene;//Printing Scene
-  
-  }
-  public String getScene(Scene scene) {return scene;}
-      public String updateByScene(Scene scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
-      public void setScene(Scene scene){this.scene=scene;}//Binding Scene in App
-  //Ball Animation
-  public class MainApp extends Ai_Character {//AI_Character Inherted Class
 
-      public Group animateAI(Group model) {//Animating 3d Model Declare
+     return Scene;//Printing Scene
+
+  }
+  //Ball Animation
+  public class MainApp extends Ai_Character{//AI_Character Inherted Class
+      public Group animateAI(Group model){//Animating 3d Model Declare
           model.getChildren().stream()//Model's Children Stream's Fetching
-                  .filter(view -> view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
-                  .foreach(view -> RotateTransition rot = new RotateTransition(Duration.seconds(.33), view)//Rotating Obj's Durational Rotation
+                  .filter(view->view.getId().equals("LEFT_ARM") || view.getId().equals("RIGHT_ARM"))//Filtering Left and Right Arm
+                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
                           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
                           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
                           rot.setByAngle(360)//Angular Rotation's Binding
-                          rot.setInterpolator(Interpolator.LINEAR))
-      }
-
-      ;//Linear Rotational Interpolaration Binding
-
-      public void existsByScene(Scene scene) {
-          if (scene != null) getScene(scene);
-          else getScene(null);
-      }
-
-      public Group loadAICharacter(URL url) {//loadAICharacter funct Declare
-          View view = new View();//View Obj declare
-          Group ModelRoot = new Group();//ModelReoot Obj declare
-          ObjModelImporter importer = new ObjModelImporter();//ObjModelImporter Obj declare
+                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      public Group loadAICharacter(URL url){//loadAICharacter funct Declare
+          View view =new View();//View Obj declare
+          Group ModelRoot=new Group();//ModelReoot Obj declare
+          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
           importer.read(url);//Url obj's Input declare
-          ModelViewObject obj =import.importer.getImport();//Fetching the Import
+          ModelViewObject obj=import.importer.getImport();//Fetching the Import
           modelRoot.getChildren().add(view);//Adding Obj View
           return modelRoot;//Printing Model Root
           animate(GroupModel);//Calling animate Func
       }
-  }
-      }
-      public void setView(View view) {this.view=view;}
-
       public Group animateBallAi(Group mdl2){//Animating 3d Model Declare
-           mdl2.getChildren().stream()//Model's Children Stream's Fetching
-           .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
-           .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
-           rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
-           rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
-           rot.setByAngle(360)//Angular Rotation's Binding
-           rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
- //Loading Ball Model
-   public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
-        View view =new View();//View Obj declare
-        Group ModelRoot=new Group();//ModelReoot Obj declare
+          mdl2.getChildren().stream()//Model's Children Stream's Fetching
+                  .filter(view->view.getId().equals("BALL_AI_MOVE_STRAIGHT") || view.getId().equals("BALL_AI_ROTATE"))//Filtering Left and Right Arm
+                  .foreach(view->RotateTransition rot=new  RotateTransition(Duration.seconds(.33),view)//Rotating Obj's Durational Rotation
+                          rot.setCycleCount(Integer.MAX_VALUE)//Rotational  Maximum CycleCount Binding
+                          rot.setAxis(Rotate.X_AXIS)//X_AXIS's Rotational Binding
+                          rot.setByAngle(360)//Angular Rotation's Binding
+                          rot.setInterpolator(Interpolator.LINEAR))};//Linear Rotational Interpolaration Binding
+      //Loading Ball Model
+      public Group loadBallAI(Group mdl2){//loadAICharacter funct Declare
+          View view =new View();//View Obj declare
+          Group ModelRoot=new Group();//ModelReoot Obj declare
+          ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
+          importer.read(url);//Url obj's Input declare
+          ModelViewObject obj=import.importer.getImport();//Fetching the Import
+          modelRoot.getChildren().add(view);//Adding Obj View
+          modelRoot=mdl2;
+          return modelRoot;//Printing Model Root
+          animateBallAi(mdl2);//Calling animate Func
+      }
+      public String getObjectModelImporter(ObjectModelImporter objectModelImporter){
+          return objectModelImporter;
+      }
+      public String setObjectModelImporter(ObjectModelImporter objectModelImporter){
+          this.objectModelImporter=objectModelImporter;
+      }
+      public Stage UpdateByStage(Stage stage){getStage(stage)+setStage(stage)+1;}//Udpating Staage in App
+      public Group getAiChracter(Group loadAICharacter){loadAICharacter(url);}//Fetching Ai Character iN App
+  }
 
-        ObjModelImporter importer =new ObjModelImporter();//ObjModelImporter Obj declare
-        importer.read(url);//Url obj's Input declare
-        ModelViewObject obj=import.importer.getImport();//Fetching the Import
-        modelRoot.getChildren().add(view);//Adding Obj View
-        modelRoot=mdl2;
-        return modelRoot;//Printing Model Root 
-        animateBallAi(mdl2);//Calling animate Func
-        }
-
+//}
  //Loading Ball Model AI_Character
 
   //Animating AI_Character Model
 
 //SCene Startup
-       public void Start(Stage Stage)throws Exception{//Start Funct Declare
-        Stage.setScene(createScrene());//Binding SceneCreation 
-        Stage.show();//Displaying Stage's Scene 
-       }
-         }
-//Using Java3d 
+
+
+//Using Java3d
 // public class MainApp extends Applet implements KeyListener {//inheriting Applet and KeyListener Class
   // public BatchGroup Rootobj=new BatchGroup();
     // public TransformGroup transformGroup=new TransformGroup();
@@ -142,8 +211,8 @@ public class MainApp extends Application {//inheriting Application
     // public BatchGroup createSceneGraph(){//createSceneGraph Method Declare
     //     BatchGroup BatchGroup=new BoundingSphere(new Points3d(),1500.0);//BatchGroup Obj Declare
     //     ViewTrans ViewTrans=universe.getViewingPlatform.getView('Platform transform');//ViewTrans Obj Declare
-    // }      
-    
+    // }
+
     // public Canvas3d(GraphicsConfiguration GraphicsConfiguration,String OffScreen){//Canvas3d Param Constructor
     //     this.GraphicsConfiguration=GraphicsConfiguration;//Binding GraphicsConfiguration Node
     //     this.OffScreen=OffScreen;//Binding OffScreen Node
