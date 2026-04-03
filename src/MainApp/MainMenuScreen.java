@@ -1,6 +1,7 @@
-//WID(1/4/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1.1.1
+//WID(3/4/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1.1.1.1
 import javax.swing.event.MenuEvent;
     public class MainMenuScreen extends SimpleApplication{
+        public void setMainMenu(MainMenu mainMenu){this.mainmenu=mainMenu;}
         public SimpleApplication existsBySimpleApplication(SimpleApplication simpleApplication) {
             if(simpleApplication!=null)getSimpleApplication(simpleApplication);
             else getSimpleApplication(null);
