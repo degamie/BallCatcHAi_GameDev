@@ -1,4 +1,4 @@
-//WID(04/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1
+//WID(05/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c
         
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
@@ -47,6 +47,10 @@ public class MainMenuScreen extends SimpleApplication{
         filemenu.getItems().addAll(editMenu,soundMenu,VideoMenu,OptionsMenu);
     }
     public String MainMenu(String[] args){
+        public MainMenuScreen existsByMainMenu(MainMenuScreen mainmenuscreen){
+            if(mainmenuscreen!=null)getmainmenuscreen(mainmenuscreen);
+            else getmainmenuscreen(null);
+        }
         public void updateByMenuBar(Menubar menubar){getMenuBar(menuBar)+setmenuBar(MenuBar)+1;}//updating Menubar in App
         public void setmenuBar(MenuBar menuBar){this.menuBar=menuBar;}//Binding MenuBar in App
         MenuBar menuBar=new MenuBar();
