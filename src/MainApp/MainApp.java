@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(7/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev)
+//Work IN Dev Sarthak Mittal=(Degamiesign)(7/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -9,6 +9,7 @@ import javax.swing.text.View;
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
+    public View updateByView(View View){getView(View)+setView(View)+1;}//Updating View in App
     public View getView(View View){return View;}
     public void existsByMainApp(MainApp mainApp){
         if(mainApp!=null)getMainapp(mainApp);
