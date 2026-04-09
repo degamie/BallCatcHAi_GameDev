@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)08/04/2026)#1cC.1.1.1.1C,1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)09/04/2026)#1cC.1.1.1.1C,1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -11,6 +11,7 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
+    public MainApp updateByModelRoot(ModelRoot modelRoot){getModelRoot(modelRoot)+setModelRoot(modelRoot)+1;}//Updating Modelroot in App
     public void setModelRoot(ModelRoot modelRoot){this.modelRoot=modelRoot;}
     public ModelRoot modelRoot=new ModelRoot();
 
