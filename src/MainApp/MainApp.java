@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(9/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(10/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -20,6 +20,10 @@ public class MainApp extends Application {//inheriting Application
     public void existsByMainApp(MainApp mainApp){
         if(mainApp!=null)getMainapp(mainApp);
         else getMainapp(null);//Chekcing MainApp's Existence in App
+    }
+    public void existsByModelRoot(ModelRoot modelRoot){
+        if(modelRoot!==null)getModelRoot(modelRoot);
+        else getModelRoot(null);
     }
     public ModelRoot updateByModelRoot(ModelRoot modelRoot){getModelRoot(modelRoot)+setModelRoot(modelRoot)+1;}//Updating ModelRoot in App
     public List<MainApp> updateByMainApp(MainApp mainApp){getMainapp(mainApp)+setMainapp(mainApp)+1;}//Updating MainApp in BallCatchAi
