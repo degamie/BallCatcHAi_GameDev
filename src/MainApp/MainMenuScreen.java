@@ -1,4 +1,4 @@
-//WID(09/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1.1
+//WID(11/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c 
 
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
@@ -36,6 +36,7 @@ public class MainMenuScreen extends SimpleApplication{
         EditMenu soundMenu=new FileMenu("soundMenu");
         EditMenu VideoMenu=new FileMenu("=VideoMenu");
         EditMenu OptionsMenu=new FileMenu("OptionsMenu");
+        public void updateByEditMenu(EditMenu editMenu){geteditMenu(editMenu)+setEditMenu(editMenu)+1;}//updating Editmenu in App
         public EditMenu getEditMenu(EditMenu editMenu){return editMenu;}//Fethcing EditMenu in App
         public void setOptionsMenu(EditMenu OptionsMenu){this.OptionsMenu=OptionsMenu;}//Binding OptionsMenu in App
         public EditMenu getOptionsMenu(EditMenu OptionsMenu){return OptionsMenu;}//Fethcing Options Menu in App
@@ -49,6 +50,10 @@ public class MainMenuScreen extends SimpleApplication{
         filemenu.getItems().addAll(editMenu,soundMenu,VideoMenu,OptionsMenu);
     }
     public String MainMenu(String[] args){
+        public MainMenuScreen existsByMenuBar(MenuBar menuBar){
+            if(menuBar!==null)getMenuBar(menuBar);
+            else getMenuBar(null);
+        }
         public MainMenuScreen existsByMainMenu(MainMenuScreen mainmenuscreen){
             if(mainmenuscreen!=null)getmainmenuscreen(mainmenuscreen);
             else getmainmenuscreen(null);
