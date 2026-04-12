@@ -1,4 +1,4 @@
-//WID(11/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c 
+//WID(12/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c.1   
 
 public class MainMenuScreen extends SimpleApplication{
     public MainMenuScreen menuScreen;
@@ -65,6 +65,7 @@ public class MainMenuScreen extends SimpleApplication{
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public void setSaveMenu(FileMenu menu){this.menu=menu;}//Binding SaveMenu in App
         public  FileMenu getMenu(FileMenu menu){return menu;}//Fethcing Menu in App
 
         public FileMenu getSaveMenu(FileMenu SaveMenu){return SaveMenu;}
