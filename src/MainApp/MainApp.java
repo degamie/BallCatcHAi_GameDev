@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(12/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(13/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -43,6 +43,7 @@ public class MainApp extends Application {//inheriting Application
         return mainApp;
       }
       public Scene createScene(){//SceneCreation Method declare
+        public PerspectiveCamera updateByperspectiveCamera(PerspectiveCamera perspecitvecamera){getPerspectiveCamera(perspecitvecamera)+setPerspectiveCamera(perspecitvecamera)+1;}//updating PerspectiveCamera in App
         public void setPerspectiveCamera(PerspectiveCamera perspecitvecamera){this.perspecitvecamera=perspecitvecamera;}
         public PerspectiveCamera getPerspectiveCamera(PerspectiveCamera){return PerspectiveCamera;}
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
