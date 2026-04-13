@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(13/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(13/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -71,6 +71,10 @@ public class MainApp extends Application {//inheriting Application
      return Scene;//Printing Scene
 
   }
+  public void existsByScene(Scene scene){
+              if(scene!=null)getScene(scene);
+              else getScene(null);
+          }
   public String getScene(Scene scene) {return scene;}
       public String updateByScene(Scene scene){getScene(scene)+setScene(scene)+1;}//updating Scene in App
       public void setScene(Scene scene){this.scene=scene;}//Binding Scene in App
