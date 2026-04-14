@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)14/04/2026)#1cC.1.1.1.1C,1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)14/04/2026)#1cC.1.1.1.1C,1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -19,6 +19,7 @@ public class MainApp extends Application {//inheriting Application
     public ModelRoot getModelRoot() {
         return modelRoot;
     }
+    public int updateByoutputCnt(int outputCnt){getOutputCnt(outputCnt)+setOutputCnt(outputCnt)+1;}//updating output Count in app
 
     public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//binding outputcnt in App
     int outputCnt=output.size();//Counting output's Size Declare
