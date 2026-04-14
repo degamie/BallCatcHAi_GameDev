@@ -1,4 +1,4 @@
-    //WID(14/4/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1.1.1.1.1.1C.1.1.1c.1.1
+    //WID(14/4/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1.1.1.1.1.1C.1.1.1c.1.1.1.1
 import javax.swing.event.MenuEvent;
     public class MainMenuScreen extends SimpleApplication{
         public void existsByMenu(Menu menu){
@@ -40,6 +40,10 @@ import javax.swing.event.MenuEvent;
         FileMenu openMenu=new FileMenu("openMenu");
         FileMenu SaveMenu=new FileMenu("SaveMenu");
         FileMenu exitMenu=new FileMenu("exitMenu");
+        public void existsByMenubar(MenuBar menubar){
+            if(menuBar!==null)getMenuBar(menuBar);
+            else getMenuBar(null);
+        }
         public MenuBar updateByMenuBar(MenuBar menuBar){
             getMenuBar(menuBar+setMenuBar(menuBar)+1;
         }
@@ -47,6 +51,7 @@ import javax.swing.event.MenuEvent;
             if(mainmenu!=null)getMainMenu(mainmenu);
             else getMainMenu(null);
         }
+        publci MenuBar updateByMenuBar(MenuBar menuBar){getMenuBar(menuBar)+setMenuBar(menuBar)+1;}//udpating Menu Bar in App
         public void setMenuBar(MenuBar menubar){this.menubar=menubar;}//Binding MEnuBar in App
         public MenuBar getMenuBar(MenuBar menubar){return menuBar;}//Fetching MenuBar in App
         public FileMenu getexitMenu(exitMenu){return exitMenu;}//Fetching exitMenu in App
