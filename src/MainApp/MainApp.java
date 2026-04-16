@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(16/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1.1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(16/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1.1.1.1c
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -62,6 +62,7 @@ public class MainApp extends Application {//inheriting Application
           public String getModel(Model mdl1){
               return mdl1;
           }
+          public void updateByroot1(Group root1){getRoot1(root1)+setRoot1(root1)+1;}//Updating Root1 in App
      animate(model);//Animating Model
      Group root1=new Group(mdl1);//Root1 Obj declare
           public void setRoot1(Group root1){this.root1=root1;}//bindning Root1 in App
