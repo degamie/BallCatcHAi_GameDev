@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(16/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(16/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -49,6 +49,7 @@ public class MainApp extends Application {//inheriting Application
         public PerspectiveCamera getPerspectiveCamera(PerspectiveCamera){return PerspectiveCamera;}
           PerspectiveCamera PerspectiveCamera=new PerspectiveCamera(true);//Perspective Camera Obj declare
           Camera camera=new Camera();//Camera obj declare
+          public Camera existsByCamera(Camera camera){if(camera!=null)getPerspectiveCamera(camera);else getPerspectiveCamera(null);}
           public Camera getCamera(Camera camera){return camera;}//Fetching Camera in App
           public void setCamera(Camera camera){this.camera=camera;}//Binding Camera in App
           public void updateByCamera(Camera camera){getCamera(camera)+setCamera(camera)+1;}//updating Camera in App
