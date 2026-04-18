@@ -1,6 +1,7 @@
-//WID(13/04/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1.1.1.1.1.1.1.1.1x.1.1.1.1
+//WID(18/04/2026)(Sarthak Mittal)(DegamieSign)#1.1.1.1.1.1.1.1.1.1.1.1x.1.1.1.1.1
 import javax.swing.plaf.nimbus.State;
 public class Ai_Character {
+    public Ai_Character updateByAiactuators(State  aiactuators){getAiactuators()+setAiactuators()+1;}//Updating AiActuators in App
     public void setAiactuators(){this.aiactuators=aiactuators;}
     public State aiactuators
 
