@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)31/03/2026)#1cC.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)19/04/2026)#1cC.1.1.1.1C,1.1.1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -11,11 +11,21 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
+    public void existsByStage(Stage stage){if(stage!==null)getStage(stage);else getStage(null);}//Checking Stage's Existence in app
+    public Stage updateBystaage(Stage stage){getStage(stage)+setStage(stage)+1;}//updating Stage in App
+    public void existsByoutputCnt(int outputCnt){
+        if(outputCnt!=0)getOutputCnt(outputCnt);
+        else getOutputCnt(0);
+    }
+    public void existsByModelRoot(ModelRoot modelRoot){if(modelRoot!==null)getModelRoot(modelRoot);else getModelRoot(null);}//Checking Modelroot's Existence in app
+    public MainApp updateByModelRoot(ModelRoot modelRoot){getModelRoot(modelRoot)+setModelRoot(modelRoot)+1;}//Updating Modelroot in App
+    public void setModelRoot(ModelRoot modelRoot){this.modelRoot=modelRoot;}
     public ModelRoot modelRoot=new ModelRoot();
 
     public ModelRoot getModelRoot() {
         return modelRoot;
     }
+    public int updateByoutputCnt(int outputCnt){getOutputCnt(outputCnt)+setOutputCnt(outputCnt)+1;}//updating output Count in app
 
     public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//binding outputcnt in App
     int outputCnt=output.size();//Counting output's Size Declare
@@ -50,6 +60,7 @@ public class MainApp extends Application {//inheriting Application
         this.obj=obj;
         this.stage=stage;
     }
+    public Stage setStage(Stage stage){this.stage=stage;}//Binding Stage in App
     public String getOut(String Out){return Out;}//Fetching OutPut in App
     public String out=null;
     int res_cnt=out.size();
