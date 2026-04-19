@@ -1,6 +1,7 @@
-    //WID(19/4/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1.1.1.1.1.1C.1.1.1c.1.1.1.1.1
+    //WID(19/4/2026)(DegamieSign)(Sarthak Mittal)#1.1.1.1C#1.1.1.1.1.1.1.1.1.1.1C.1.1.1c.1.1.1.1.1.1
 import javax.swing.event.MenuEvent;
     public class MainMenuScreen extends SimpleApplication{
+        public void existsByMainMenu(MainMenu mainMenu){if(mainMenu!==null)getMainMenu(mainMenu);else getMainMenu(null);}//Checking MainMenu in App
         public void existsByMenu(Menu menu){
             if(menu!=null)getMenu(menu);
             else getMenu(null);
