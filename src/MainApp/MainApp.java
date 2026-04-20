@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)19/04/2026)#1cC.1.1.1.1C,1.1.1.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)20/04/2026)#1cC.1.1.1.1C,1.1.1.1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -11,9 +11,14 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
+    public void existsByStage(Stage stage){if(stage!==null)getStage(stage);else getStage(null);}//Checking Stage's Existence in app
     public Stage updateBystaage(Stage stage){getStage(stage)+setStage(stage)+1;}//updating Stage in App
     public void existsByoutputCnt(int outputCnt){
         if(outputCnt!=0)getOutputCnt(outputCnt);
+        else getOutputCnt(0);
+    }
+    public void existsByoutputCnt(int outputCnt){
+        if(outputCnt!==0)getOutputCnt(outputCnt);
         else getOutputCnt(0);
     }
     public void existsByModelRoot(ModelRoot modelRoot){if(modelRoot!==null)getModelRoot(modelRoot);else getModelRoot(null);}//Checking Modelroot's Existence in app
