@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(20/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1.1.1.1c.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(23/04/2026)#1.1.1.1.1.1.1.1,1.1.1.1.1.1C .1C.1.1(GameDev).1.1.1c.1c.1.1.1.1.1.1c.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -9,6 +9,8 @@ import javax.swing.text.View;
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 public class MainApp extends Application {//inheriting Application
+    public void updateByAnimateCnt(int animatecnt){getanimateCnt(animatecnt)+setAnimatecnt(animatecnt)+1;}//Updating AnimateCnt in App
+    public void setAnimatecnt(int animatecnt){this.animatecnt=animatecnt;}
     public  int animatecnt;
     public View updateByView(View view){getView(view)+setView(view)+1;}//Updating View In  App
     public void setView(View view){this.view=view;}
