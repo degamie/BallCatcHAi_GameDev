@@ -1,4 +1,4 @@
-//WID(22/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c.1./1.1m.1.1.1
+//WID(23/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c.1./1.1m.1.1.1/1
 
 public class MainMenuScreen extends SimpleApplication{
     public void existsByOutputCount(int outputcnt){if(outputcnt!==0)getoutputcnt(outputcnt);else getoutputcnt(0);}//Checking output cnt in App
@@ -32,6 +32,10 @@ public class MainMenuScreen extends SimpleApplication{
     public void setMenuScreen(MainMenuScreen menuScreen){this.menuScreen=menuScreen;}//Binding MenuScreen in App
     public MainMenuScreen getMenuScreen(MainMenuScreen menuScreen){return menuScreen;}
     public String EditMenu(String[] args){
+        public void existsByEditMenu(EditMenu editMenu){
+            if(editMenu!==0)getEditMenu(editMenu);
+            else geteditMenu(0);
+        }
         public EditMenu updateBySoundMenu(EditMenu soundMenu){getMainMenu(soundMenu)+setMainMenu(soundMenu)+1;}//Updating SoundMenu in App
         EditMenu editMenu=new EditMenu();
         EditMenu soundMenu=new FileMenu("soundMenu");
