@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(24/04/2026#1.1
+//Work IN Dev Sarthak Mittal=(Degamiesign)(25/04/2026#1.1/1,1
 //Using JavaFX
 
 import java.applet.Applet;
@@ -11,6 +11,10 @@ import javax.swing.text.View;
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
 
 public class MainApp extends Application {//inheriting Application
+    public void existsByCamera(Camera camera){
+        if(camera!==null)getCamera(camera);
+        else getCamera(null);
+    }
     public void updateByCamera(Camera camera){getByCamera(camera)+setCamera(camera)+1;}//Updating Camera in App
     public void setCamera(Camera camera){this.camera=camera;}//binding Camera in App
     public MainApp mainApp;
@@ -20,6 +24,7 @@ public class MainApp extends Application {//inheriting Application
     public String getCamera(Camera camera){
       return camera;//Fethching Camera
     }
+    public void setPerspectiveCamera(PerspectiveCamera perspectiveCamera){this.perspectiveCamera=perspectiveCamera;}//Binding PerspectiveCamera In App
     public PerspectiveCamera getPerspectiveCamera(PerspectiveCamera PerspectiveCamera){return PerspectiveCamera;}//Fethcing PerspectiveCamera in App
     camera.setTranslateZ(-3.5);//Camera's Opposive Z-AXis Translation
   public Group mdl1=loadBallAI(getClass().getResources("Ball_AI.fbx"));
