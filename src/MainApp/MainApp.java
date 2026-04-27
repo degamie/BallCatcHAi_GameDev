@@ -1,4 +1,4 @@
-//Work IN Dev Sarthak Mittal=(Degamiesign)(26/04/2026#1.1/1,1.1 
+//Work IN Dev Sarthak Mittal=(Degamiesign)(27/04/2026#1.1/1,1.1.1
 //Using JavaFX
 
 import java.applet.Applet;
@@ -11,6 +11,7 @@ import javax.swing.text.View;
 import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
 
 public class MainApp extends Application {//inheriting Application
+    public void updateByModelRoot(ModelRoot modelRoot){getByModelRoot(modelRoot)+setModelRoot(modelRoot)+1;}//Updating ModelRoot in App
     public void setModelRoot(ModelRoot modelRoot){this.modelRoot=modelRoot;}//binding ModelRoot in App
     public void existsByCamera(Camera camera){
         if(camera!==null)getCamera(camera);
