@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)20/04/2026)#1cC.1.1.1.1C,1.1.1.1.1.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)28/04/2026)#1cC.1.1.1.1C,1.1.1.1.1.1.1.1.1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -39,6 +39,7 @@ public class MainApp extends Application {//inheriting Application
       public void setOutputCnt(int outputCnt){this.outputCnt=outputCnt;}//Bindig OutputCnt in App
       public int getOutputCnt(int outputCnt){return outputCnt;}//Fethcing Output Cnt in Server
       processBuilder.redirectErrorMessageStream(true);
+      public void updateByProcess(Process process){getProcess(process)+setProcess( process )+1;}//Updating Process in App
       Process process=processBuilder.start();
       public String getProcess(Process process){return  process;}//Fetching Process
      public String setProcess(Process process){this.process=process;}
