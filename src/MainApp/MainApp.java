@@ -1,4 +1,4 @@
-    //Work IN Dev Sarthak Mittal=(Degamiesign)28/04/2026)#1cC.1.1.1.1C,1.1.1.1.1.1.1.1.1
+    //Work IN Dev Sarthak Mittal=(Degamiesign)02/05/2026)#1cC.1.1.1.1C,1.1.1.1.1.1.1.1.1/1
 import java.applet.Applet;
 import java.awt.GraphicsConfiguration;
 import java.time.Duration;
@@ -11,6 +11,10 @@ import sun.jvm.hotspot.ui.tree.RootTreeNodeAdapter;
   //Using JavaFX
 
 public class MainApp extends Application {//inheriting Application
+    public void existsByApplication(Application application){
+        if(application!==null)getApplication(application);
+        else getApplication(null);
+    }
     public void existsByStage(Stage stage){if(stage!==null)getStage(stage);else getStage(null);}//Checking Stage's Existence in app
     public Stage updateBystaage(Stage stage){getStage(stage)+setStage(stage)+1;}//updating Stage in App
     public void existsByoutputCnt(int outputCnt){
