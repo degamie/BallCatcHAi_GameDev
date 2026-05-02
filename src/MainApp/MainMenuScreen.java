@@ -1,6 +1,7 @@
-//WID(28/04/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c.1./1.1m.1.1.1/1.1.1.1
+//WID(02/05/2026)(Sarthak Mittal)(degamieSign)#1.1.1.1.1,1.1.11.1.1.11.1.1.1.1.1.1.1.1.1.1.1.1.1,1.1c.1.1/1n.1/1/1c.1./1.1m.1.1.1/1.1.1.1.1
 
 public class MainMenuScreen extends SimpleApplication{
+    public MenuWidget menucomp;
     public void existsByOutputCount(int outputcnt){if(outputcnt!==0)getoutputcnt(outputcnt);else getoutputcnt(0);}//Checking output cnt in App
     public MainMenuScreen menuScreen;
     public void existsByMenuScreen(MainMenuScreen mainMenuScreen){
